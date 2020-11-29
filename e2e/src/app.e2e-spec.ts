@@ -8,9 +8,14 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should be header with parallax', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('resume app is running!');
+    expect(page.getHeaderParallaxBackground().getCssValue('top')).toEqual('0px');
+
+    browser.executeScript('window.scrollTo(0,10);').then(() => {
+      browser.sleep(1000);
+      expect(page.getHeaderParallaxBackground().getCssValue('top')).not.toBe('0px');
+    });
   });
 
   afterEach(async () => {
