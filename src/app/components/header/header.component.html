@@ -1,1 +1,74 @@
-<p>header works!</p>
+<header>
+  <div
+    class="background"
+    #backgroundParallaxRef
+    [ngStyle]="{
+      backgroundImage: 'url(../../../assets/images/background.jpg)'
+    }"
+  ></div>
+
+  <div class="container">
+    <div class="personal-info">
+      <div
+        class="photo"
+        [ngStyle]="{ backgroundImage: 'url(../../../assets/images/photo.jpg)' }"
+      ></div>
+
+      <div class="other-info-container">
+        <div class="titles">
+          <h1>Евгения Михалева</h1>
+          <h2>Frontend Developer</h2>
+        </div>
+
+        <div class="actions">
+          <div class="contacts">
+            <a class="email" href="mailto:hope.aidera@gmail.com">
+              <div
+                class="icon"
+                [inlineSVG]="'../../../assets/icons/email.svg'"
+              ></div>
+              <span>hope.aidera@gmail.com</span>
+            </a>
+            <a class="phone" href="tel:+380689510380">
+              <div
+                class="icon"
+                [inlineSVG]="'../../../assets/icons/phone.svg'"
+              ></div>
+              <span>+38 (068) 951-03-80</span>
+            </a>
+          </div>
+
+          <div class="socials">
+            <a href="https://github.com/aidera" target="_blank">
+              <div
+                class="icon"
+                [inlineSVG]="'../../../assets/icons/github.svg'"
+              ></div>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/evgenia-mikhaleva-2a3bb6181/"
+              target="_blank"
+            >
+              <div
+                class="icon"
+                [inlineSVG]="'../../../assets/icons/linkedin.svg'"
+              ></div>
+            </a>
+            <a href="https://www.facebook.com/hope.aidera" target="_blank">
+              <div
+                class="icon"
+                [inlineSVG]="'../../../assets/icons/facebook.svg'"
+              ></div>
+            </a>
+            <a href="https://www.instagram.com/hope.aidera/" target="_blank">
+              <div
+                class="icon"
+                [inlineSVG]="'../../../assets/icons/instagram.svg'"
+              ></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

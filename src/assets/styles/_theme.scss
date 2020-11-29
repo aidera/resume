@@ -2,7 +2,6 @@
 @import 'fonts';
 @import 'reset';
 
-
 html,
 body {
   height: 100%;
@@ -10,17 +9,17 @@ body {
 
 body {
   margin: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   overflow-x: hidden;
 }
 
 * {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 input::placeholder,
 textarea::placeholder {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 a,
@@ -28,7 +27,6 @@ a:visited,
 a:active {
   color: $text-color-primary;
 }
-
 
 .container {
   width: 1150px;
@@ -44,7 +42,6 @@ a:active {
     padding: 0 5vw;
   }
 }
-
 
 .spacer {
   flex-grow: 1;
@@ -79,10 +76,6 @@ a:active {
   }
 }
 
-
-
-
-
 /* Scroll bar */
 ::-webkit-scrollbar {
   width: 7px;
@@ -97,7 +90,7 @@ a:active {
   -webkit-border-radius: 15px;
   background-color: rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05),
-  inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+    inset 1px 1px 0px rgba(0, 0, 0, 0.05);
 }
 ::-webkit-scrollbar-button {
   width: 0;

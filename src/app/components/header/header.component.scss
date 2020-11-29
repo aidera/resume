@@ -1,0 +1,128 @@
+@import '../../../assets/styles/_variables';
+
+header {
+  position: relative;
+  width: 100%;
+  padding-top: 56px;
+  padding-bottom: 32px;
+  background-color: #486694;
+  box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.19),
+    0 -6px 6px rgba(0, 0, 0, 0.23);
+  overflow: hidden;
+
+  .background {
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    filter: blur(8px);
+  }
+
+  .personal-info {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    @media (max-width: $bp-md) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .photo {
+      width: 250px;
+      height: 250px;
+      background-position: center center;
+      background-size: cover;
+      border-radius: 50%;
+      margin-right: 40px;
+      border: 8px solid white;
+      box-shadow: $shadow-1;
+      flex-shrink: 0;
+      @media (max-width: $bp-md) {
+        margin-right: 0;
+        margin-bottom: 24px;
+      }
+      @media (max-width: $bp-sm) {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    .other-info-container {
+      .titles {
+        h1,
+        h2 {
+          text-transform: uppercase;
+        }
+        h1 {
+          font-weight: 500;
+          font-size: 56px;
+          @media (max-width: $bp-md) {
+            font-size: 40px;
+          }
+          @media (max-width: $bp-sm) {
+            font-size: 32px;
+          }
+        }
+        h2 {
+          font-weight: 200;
+          font-size: 24px;
+          @media (max-width: $bp-sm) {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .actions {
+        margin-top: 32px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        @media (max-width: $bp-sm) {
+          flex-direction: column;
+        }
+
+        .contacts {
+          margin-right: 32px;
+          @media (max-width: $bp-sm) {
+            margin-right: 0;
+            margin-bottom: 16px;
+          }
+          a {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            margin-bottom: 4px;
+            .icon {
+              width: 20px;
+              height: 20px;
+              fill: #ffffff;
+              margin-right: 8px;
+            }
+            span {
+              color: white;
+              font-weight: 200;
+            }
+          }
+        }
+
+        .socials {
+          display: flex;
+          a {
+            margin-right: 8px;
+            .icon {
+              width: 24px;
+              height: 24px;
+              fill: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

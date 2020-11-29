@@ -1,6 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SectionsComponent } from './sections.component';
+import { LastWordsComponent } from './last-words/last-words.component';
+import { TechnicalSkillsComponent } from './technical-skills/technical-skills.component';
+import { SoftSkillsComponent } from './soft-skills/soft-skills.component';
+import { EducationComponent } from './education/education.component';
+import { PlacesOfWorkComponent } from './places-of-work/places-of-work.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 describe('SectionsComponent', () => {
   let component: SectionsComponent;
@@ -8,9 +15,17 @@ describe('SectionsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SectionsComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        SectionsComponent,
+        ContactsComponent,
+        EducationComponent,
+        LastWordsComponent,
+        PlacesOfWorkComponent,
+        ProjectsComponent,
+        SoftSkillsComponent,
+        TechnicalSkillsComponent,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

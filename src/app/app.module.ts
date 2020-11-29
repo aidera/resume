@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { InlineSVGModule } from 'ng-inline-svg';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -31,10 +33,8 @@ import { SectionsComponent } from './components/sections/sections.component';
     PrintItModalComponent,
     SectionsComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, HttpClientModule, InlineSVGModule.forRoot()],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
