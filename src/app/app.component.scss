@@ -1,0 +1,16 @@
+.layout {
+  display: flex;
+  position: relative;
+  overflow-y: auto;
+  max-height: 100%;
+
+  .layout-sidebar {
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+  }
+
+  .layout-content {
+    flex-grow: 1;
+  }
+}
