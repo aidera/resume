@@ -1,0 +1,124 @@
+@import '../../../assets/styles/_variables';
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: $sidebar-closed-width;
+  transition: $transition-1;
+  box-shadow: $shadow-1;
+  user-select: none;
+
+  @media (max-width: $bp-md) {
+    display: none;
+  }
+
+  &.open {
+    width: $sidebar-width;
+    box-shadow: $shadow-1-hover;
+  }
+
+  .language-panel {
+    display: flex;
+    width: $sidebar-width;
+    height: $sidebar-closed-width;
+    margin-bottom: 16px;
+    position: relative;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      width: $sidebar-closed-width;
+      height: $sidebar-closed-width;
+      border: none;
+      outline: none;
+      position: absolute;
+      top: 0;
+      transition: $transition-1;
+      &:active,
+      &:focus {
+        border: none;
+        outline: none;
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &.disabled {
+        color: $text-color-primary;
+        cursor: default;
+        opacity: 1;
+      }
+
+      &:nth-child(1) {
+        left: 0;
+      }
+      &:nth-child(2) {
+        left: $sidebar-width - $sidebar-closed-width * 2;
+      }
+      &:nth-child(3) {
+        left: $sidebar-width - $sidebar-closed-width;
+      }
+    }
+
+    .animation {
+      background-color: white;
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      padding: 16px 16px;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      width: $sidebar-width;
+      cursor: pointer;
+      border-bottom: 1px solid lightgray;
+      transition: $transition-1;
+      .icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 16px;
+        flex-shrink: 0;
+        fill: $text-color-primary;
+        transition: $transition-1;
+        opacity: 1;
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      span {
+        font-weight: 200;
+        transition: $transition-1;
+        opacity: 1;
+      }
+
+      &:last-child {
+        border: none;
+      }
+      &:hover {
+        background-color: #eaeaea;
+      }
+      &.active {
+        background-color: $color-primary;
+        box-shadow: inset 0 5px 8px rgba(0, 0, 0, 0.3);
+        .icon {
+          fill: white;
+        }
+        span {
+          color: white;
+        }
+      }
+    }
+  }
+}

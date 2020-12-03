@@ -1,1 +1,58 @@
-<p>sidebar works!</p>
+<div
+  id="sidebar"
+  [class.open]="isOpen"
+  (mouseover)="isOpen = true"
+  (mouseleave)="isOpen = false"
+>
+  <div class="language-panel" #languagePanel>
+    <button class="en disabled" (click)="changeLanguage('en')">ENG</button>
+    <button class="ru" (click)="changeLanguage('ru')">РУС</button>
+    <button class="ua" (click)="changeLanguage('ua')">УКР</button>
+  </div>
+
+  <div class="spacer"></div>
+
+  <nav class="links">
+    <a>
+      <div class="icon" [inlineSVG]="'../../../assets/icons/cpu.svg'"></div>
+      <span>Технические навыки</span>
+    </a>
+    <a class="active">
+      <div
+        class="icon"
+        [inlineSVG]="'../../../assets/icons/coorperation.svg'"
+      ></div>
+      <span>Вспомогательные навыки</span>
+    </a>
+    <a>
+      <div
+        class="icon"
+        [inlineSVG]="'../../../assets/icons/mortarboard.svg'"
+      ></div>
+      <span>Образование</span>
+    </a>
+    <a>
+      <div
+        class="icon"
+        [inlineSVG]="'../../../assets/icons/suitcase.svg'"
+      ></div>
+      <span>Места работы</span>
+    </a>
+    <a>
+      <div
+        class="icon"
+        [inlineSVG]="'../../../assets/icons/start-up.svg'"
+      ></div>
+      <span>Проекты</span>
+    </a>
+    <a>
+      <div
+        class="icon"
+        [inlineSVG]="'../../../assets/icons/contacts.svg'"
+      ></div>
+      <span>Контакты</span>
+    </a>
+  </nav>
+
+  <div class="spacer"></div>
+</div>
