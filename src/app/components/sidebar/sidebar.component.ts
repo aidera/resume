@@ -1,10 +1,4 @@
-import {
-  Component,
-  ElementRef,
-  OnInit,
-  ViewChild,
-  Renderer2,
-} from '@angular/core';
+import { Component, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 
 import { Locale } from '../../models/Locale';
 
@@ -17,7 +11,6 @@ export class SidebarComponent {
   @ViewChild('languagePanel') languagePanel: ElementRef;
 
   currentLocale: Locale = 'en';
-  isOpen = false;
 
   constructor(private render: Renderer2) {}
 

@@ -1,9 +1,4 @@
-<div
-  id="sidebar"
-  [class.open]="isOpen"
-  (mouseover)="isOpen = true"
-  (mouseleave)="isOpen = false"
->
+<div id="sidebar">
   <div class="language-panel" #languagePanel>
     <button class="en disabled" (click)="changeLanguage('en')">ENG</button>
     <button class="ru" (click)="changeLanguage('ru')">РУС</button>

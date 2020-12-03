@@ -15,7 +15,7 @@
     display: none;
   }
 
-  &.open {
+  &:hover {
     width: $sidebar-width;
     box-shadow: $shadow-1-hover;
   }

@@ -1,10 +1,4 @@
-import {
-  async,
-  ComponentFixture,
-  fakeAsync,
-  TestBed,
-  tick,
-} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { InlineSVGModule } from 'ng-inline-svg';
@@ -30,20 +24,6 @@ describe('SidebarComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('should be opened on hover', () => {
-    const sidebar = fixture.debugElement.query(By.css('#sidebar'))
-      .nativeElement;
-    expect(component.isOpen).toBeFalsy();
-
-    sidebar.dispatchEvent(new MouseEvent('mouseover'));
-    fixture.detectChanges();
-    expect(component.isOpen).toBeTruthy();
-
-    sidebar.dispatchEvent(new MouseEvent('mouseleave'));
-    fixture.detectChanges();
-    expect(component.isOpen).toBeFalsy();
   });
 
   it('should set clicked language', () => {
