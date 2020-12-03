@@ -19,19 +19,26 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.backgroundParallaxScroll();
-    window.addEventListener('scroll', (e) => {
-      this.backgroundParallaxScroll();
-    });
   }
 
   ngAfterViewInit(): void {
-    this.backgroundParallaxScroll();
+    const layoutContent = document.querySelector('.layout-content');
+    if (layoutContent) {
+      document
+        .querySelector('.layout-content')
+        .addEventListener('scroll', (e) => {
+          this.backgroundParallaxScroll();
+        });
+      this.backgroundParallaxScroll();
+    }
   }
 
   backgroundParallaxScroll(): void {
     if (this.backgroundParallaxRef) {
       this.backgroundParallaxRef.nativeElement.style.top =
-        window.scrollY * this.parallaxMultiplier + 'px';
+        (document.querySelector('.layout-content') as HTMLElement).scrollTop *
+          this.parallaxMultiplier +
+        'px';
     }
   }
 }

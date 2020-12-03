@@ -52,7 +52,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && ng lint && npm run test-once",
+      "pre-commit": "pretty-quick --staged && ng lint && npm run test-once && npm run e2e",
       "pre-push": "ng build --aot true"
     }
   }

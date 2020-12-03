@@ -5,8 +5,11 @@ export class AppPage {
     return browser.get(browser.baseUrl) as Promise<unknown>;
   }
 
-  // сделать тест параллакса
   getHeaderParallaxBackground(): ElementFinder {
     return element(by.css('header .background'));
+  }
+
+  getSidebar(): ElementFinder {
+    return element(by.css('#sidebar'));
   }
 }
