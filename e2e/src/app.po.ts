@@ -5,11 +5,27 @@ export class AppPage {
     return browser.get(browser.baseUrl) as Promise<unknown>;
   }
 
+  getLayoutContent(): ElementFinder {
+    return element(by.css('.layout-content'));
+  }
+
   getHeaderParallaxBackground(): ElementFinder {
     return element(by.css('header .background'));
   }
 
-  getSidebar(): ElementFinder {
-    return element(by.css('#sidebar'));
+  getDesktopSidebar(): ElementFinder {
+    return element(by.css('.layout-sidebar .sidebar'));
+  }
+
+  getMobileMenu(): ElementFinder {
+    return element(by.css('.layout-content .sidebar'));
+  }
+
+  getDynamicHeader(): ElementFinder {
+    return element(by.css('#header-dynamic'));
+  }
+
+  getDynamicHeaderContainer(): ElementFinder {
+    return element(by.css('#header-dynamic > *'));
   }
 }

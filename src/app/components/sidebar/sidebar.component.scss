@@ -1,6 +1,6 @@
 @import '../../../assets/styles/_variables';
 
-#sidebar {
+.sidebar {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -10,18 +10,16 @@
   transition: $transition-1;
   box-shadow: $shadow-1;
   user-select: none;
+  background-color: white;
 
-  @media (max-width: $bp-md) {
-    display: none;
-  }
-
-  &:hover {
+  &.open {
     width: $sidebar-width;
     box-shadow: $shadow-1-hover;
   }
 
   .language-panel {
     display: flex;
+    flex-shrink: 0;
     width: $sidebar-width;
     height: $sidebar-closed-width;
     margin-bottom: 16px;
@@ -73,6 +71,7 @@
 
   .links {
     display: flex;
+    flex-shrink: 0;
     flex-direction: column;
 
     a {

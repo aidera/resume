@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { InlineSVGModule } from 'ng-inline-svg';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -16,6 +17,7 @@ import { ActionsComponent } from './components/actions/actions.component';
 import { LastWordsComponent } from './components/sections/last-words/last-words.component';
 import { PrintItModalComponent } from './components/print-it-modal/print-it-modal.component';
 import { SectionsComponent } from './components/sections/sections.component';
+import { HeaderDynamicComponent } from './components/header-dynamic/header-dynamic.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +34,14 @@ import { SectionsComponent } from './components/sections/sections.component';
     LastWordsComponent,
     PrintItModalComponent,
     SectionsComponent,
+    HeaderDynamicComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, InlineSVGModule.forRoot()],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    InlineSVGModule.forRoot(),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

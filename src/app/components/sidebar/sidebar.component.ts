@@ -1,4 +1,13 @@
-import { Component, ElementRef, ViewChild, Renderer2 } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  ViewChild,
+  Renderer2,
+  Input,
+  OnInit,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 
 import { Locale } from '../../models/Locale';
 
@@ -7,19 +16,42 @@ import { Locale } from '../../models/Locale';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
 })
-export class SidebarComponent {
-  @ViewChild('languagePanel') languagePanel: ElementRef;
+export class SidebarComponent implements OnInit {
+  @Input() isStatic = false;
+  @Output() buttonCLicked = new EventEmitter();
+
+  @ViewChild('sidebar') sidebarRef: ElementRef;
+  @ViewChild('languagePanel') languagePanelRef: ElementRef;
+
+  isOpen = false;
 
   currentLocale: Locale = 'en';
 
   constructor(private render: Renderer2) {}
 
+  ngOnInit(): void {
+    this.isOpen = this.isStatic;
+  }
+
+  onMouseEnter(): void {
+    this.isOpen = true;
+  }
+
+  onMouseLeave(): void {
+    this.isOpen = this.isStatic;
+  }
+
+  onButtonClicked(): void {
+    this.buttonCLicked.emit();
+  }
+
   changeLanguage(localeToSet: Locale): void {
+    this.onButtonClicked();
     if (this.currentLocale !== localeToSet) {
-      const currentLocaleElement = this.languagePanel.nativeElement.querySelector(
+      const currentLocaleElement = this.languagePanelRef.nativeElement.querySelector(
         `.${this.currentLocale}`
       );
-      const localeToSetElement = this.languagePanel.nativeElement.querySelector(
+      const localeToSetElement = this.languagePanelRef.nativeElement.querySelector(
         `.${localeToSet}`
       );
       const localeToSetElementLeft = localeToSetElement.offsetLeft;

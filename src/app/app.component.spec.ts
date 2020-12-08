@@ -13,6 +13,7 @@ import { PlacesOfWorkComponent } from './components/sections/places-of-work/plac
 import { ProjectsComponent } from './components/sections/projects/projects.component';
 import { SoftSkillsComponent } from './components/sections/soft-skills/soft-skills.component';
 import { TechnicalSkillsComponent } from './components/sections/technical-skills/technical-skills.component';
+import { HeaderDynamicComponent } from './components/header-dynamic/header-dynamic.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -20,6 +21,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         HeaderComponent,
+        HeaderDynamicComponent,
         SidebarComponent,
         ActionsComponent,
         SectionsComponent,

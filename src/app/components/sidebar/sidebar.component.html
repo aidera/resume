@@ -1,4 +1,10 @@
-<div id="sidebar">
+<div
+  class="sidebar"
+  [ngClass]="{ sidebar: true, open: isOpen }"
+  #sidebar
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+>
   <div class="language-panel" #languagePanel>
     <button class="en disabled" (click)="changeLanguage('en')">ENG</button>
     <button class="ru" (click)="changeLanguage('ru')">РУС</button>
@@ -8,39 +14,39 @@
   <div class="spacer"></div>
 
   <nav class="links">
-    <a>
+    <a (click)="onButtonClicked()">
       <div class="icon" [inlineSVG]="'../../../assets/icons/cpu.svg'"></div>
       <span>Технические навыки</span>
     </a>
-    <a class="active">
+    <a class="active" (click)="onButtonClicked()">
       <div
         class="icon"
         [inlineSVG]="'../../../assets/icons/coorperation.svg'"
       ></div>
       <span>Вспомогательные навыки</span>
     </a>
-    <a>
+    <a (click)="onButtonClicked()">
       <div
         class="icon"
         [inlineSVG]="'../../../assets/icons/mortarboard.svg'"
       ></div>
       <span>Образование</span>
     </a>
-    <a>
+    <a (click)="onButtonClicked()">
       <div
         class="icon"
         [inlineSVG]="'../../../assets/icons/suitcase.svg'"
       ></div>
       <span>Места работы</span>
     </a>
-    <a>
+    <a (click)="onButtonClicked()">
       <div
         class="icon"
         [inlineSVG]="'../../../assets/icons/start-up.svg'"
       ></div>
       <span>Проекты</span>
     </a>
-    <a>
+    <a (click)="onButtonClicked()">
       <div
         class="icon"
         [inlineSVG]="'../../../assets/icons/contacts.svg'"

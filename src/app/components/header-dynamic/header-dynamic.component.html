@@ -1,0 +1,75 @@
+<div id="header-dynamic" class="change-width-with-sidebar" #headerDynamic>
+  <div class="header-dynamic__container" #headerDynamicContainer>
+    <div class="main-info">
+      <div class="photo">
+        <img src="./assets/images/photo.jpg" alt="Me" />
+      </div>
+      <div class="description">
+        <strong>Евгения Михалева</strong>
+        <p>Frontend Developer</p>
+      </div>
+    </div>
+
+    <div class="contacts">
+      <a href="tel:+380689510380">
+        <div class="icon" [inlineSVG]="'../../../assets/icons/phone.svg'"></div>
+        <span>+38 (068) 951-03-80</span>
+      </a>
+      <a href="mailto:hope.aidera@gmail.com">
+        <div class="icon" [inlineSVG]="'../../../assets/icons/email.svg'"></div>
+        <span>hope.aidera@gmail.com</span>
+      </a>
+      <a href="https://github.com/aidera" target="_blank">
+        <div
+          class="icon"
+          [inlineSVG]="'../../../assets/icons/github.svg'"
+        ></div>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/evgenia-mikhaleva-2a3bb6181/"
+        target="_blank"
+      >
+        <div
+          class="icon"
+          [inlineSVG]="'../../../assets/icons/linkedin.svg'"
+        ></div>
+      </a>
+      <a href="https://www.facebook.com/hope.aidera" target="_blank">
+        <div
+          class="icon"
+          [inlineSVG]="'../../../assets/icons/facebook.svg'"
+        ></div>
+      </a>
+      <a href="https://www.instagram.com/hope.aidera/" target="_blank">
+        <div
+          class="icon"
+          [inlineSVG]="'../../../assets/icons/instagram.svg'"
+        ></div>
+      </a>
+    </div>
+
+    <button
+      [ngClass]="{ 'mobile-menu-trigger': true, active: isMobileMenuOpen }"
+      (click)="isMobileMenuOpen = !isMobileMenuOpen"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</div>
+
+<div
+  class="backdrop mobile-menu__backdrop"
+  (click)="isMobileMenuOpen = false"
+  *ngIf="isMobileMenuOpen"
+  @backdrop
+></div>
+<div id="mobile-menu" [class.open]="isMobileMenuOpen">
+  <div class="mobile-menu-content">
+    <app-sidebar
+      [isStatic]="true"
+      (buttonCLicked)="isMobileMenuOpen = false"
+    ></app-sidebar>
+  </div>
+</div>
