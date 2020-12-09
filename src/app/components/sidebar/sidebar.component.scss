@@ -51,6 +51,7 @@
         color: $text-color-primary;
         cursor: default;
         opacity: 1;
+        font-weight: 500;
       }
 
       &:nth-child(1) {
@@ -97,7 +98,8 @@
         }
       }
       span {
-        font-weight: 200;
+        font-weight: 500;
+        font-size: 14px;
         transition: $transition-1;
         opacity: 1;
       }

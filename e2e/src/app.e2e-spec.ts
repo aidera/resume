@@ -9,15 +9,6 @@ describe('workspace-project App', () => {
     page.navigateTo();
   });
 
-  it('should be header with parallax', () => {
-    expect(page.getHeaderParallaxBackground().getCssValue('top')).toEqual('0px');
-    browser.sleep(1000);
-    browser.executeScript('document.querySelector(".layout-content").scrollTop += 10;').then(() => {
-      browser.sleep(1000);
-      expect(page.getHeaderParallaxBackground().getCssValue('top')).not.toBe('0px');
-    });
-  });
-
   it('should open sidebar on hover', () => {
     const sidebar = page.getDesktopSidebar();
     const sidebarWidthBefore = sidebar.getCssValue('width');

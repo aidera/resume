@@ -1,0 +1,50 @@
+@import '../../../../assets/styles/_variables';
+
+.skills-group {
+  margin-top: 80px;
+
+  .skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    margin-bottom: 56px;
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+    }
+
+    .skill {
+      display: flex;
+
+      .image {
+        max-width: 60px;
+        margin-right: 20px;
+        img {
+          width: 100%;
+        }
+      }
+
+      .content {
+        h4 {
+          font-weight: 500;
+          font-size: 18px;
+        }
+
+        .rate {
+          display: flex;
+          margin-top: 8px;
+          margin-bottom: 4px;
+          span {
+            margin-right: 4px;
+            height: 4px;
+            width: 16px;
+            background-color: lightgray;
+            &.active {
+              background-color: $color-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}

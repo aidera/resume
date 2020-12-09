@@ -9,10 +9,6 @@ export class AppPage {
     return element(by.css('.layout-content'));
   }
 
-  getHeaderParallaxBackground(): ElementFinder {
-    return element(by.css('header .background'));
-  }
-
   getDesktopSidebar(): ElementFinder {
     return element(by.css('.layout-sidebar .sidebar'));
   }

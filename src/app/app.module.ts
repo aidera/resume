@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { InlineSVGModule } from 'ng-inline-svg';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { registerLocaleData } from '@angular/common';
+import localeRu from '@angular/common/locales/ru';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -18,6 +20,9 @@ import { LastWordsComponent } from './components/sections/last-words/last-words.
 import { PrintItModalComponent } from './components/print-it-modal/print-it-modal.component';
 import { SectionsComponent } from './components/sections/sections.component';
 import { HeaderDynamicComponent } from './components/header-dynamic/header-dynamic.component';
+
+// TODO: переместить потом в сервис translate
+registerLocaleData(localeRu, 'ru');
 
 @NgModule({
   declarations: [
@@ -42,7 +47,19 @@ import { HeaderDynamicComponent } from './components/header-dynamic/header-dynam
     HttpClientModule,
     InlineSVGModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'ru',
+    },
+  ],
+  // TODO: локализация date pipe
+  // {
+  //   provide: LOCALE_ID,
+  //   deps: [SettingsService],      //some service handling global settings
+  //   useFactory: (settingsService) => settingsService.getLanguage()  //returns locale string
+  // }
+  // это для локализации date pipe и возможность смены этого LOCALE_ID через любой сервис
   bootstrap: [AppComponent],
 })
 export class AppModule {}
