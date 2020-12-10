@@ -9,7 +9,9 @@ import { TechSkillCategory } from 'src/app/models/Skill';
   styleUrls: ['./technical-skills.component.scss'],
 })
 export class TechnicalSkillsComponent implements OnInit {
-  public skills = techSkills;
+  public skills = techSkills.sort((a, b) => {
+    return b.priority - a.priority;
+  });
   public techSkillCategories = Object.keys(TechSkillCategory).slice(
     0,
     Object.keys(TechSkillCategory).length / 2

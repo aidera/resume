@@ -52,6 +52,10 @@
                     (skill.lastUse | date: 'MMM y')
               }}
             </div>
+
+            <div class="comment" *ngIf="skill.comment">
+              {{ skill.comment.ru }}
+            </div>
           </div>
         </div>
       </ng-container>

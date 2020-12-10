@@ -9,6 +9,11 @@ export const techSkills: TechSkill[] = [
     lastUse: 'now',
     experienceInYears: 1,
     priority: 1001,
+    comment: {
+      ru: 'Основной язык программирования',
+      ua: 'Основна мова програмування',
+      en: 'Main programming language',
+    },
   },
   {
     name: 'JavaScript',
@@ -19,6 +24,11 @@ export const techSkills: TechSkill[] = [
     lastUse: 'now',
     experienceInYears: 3,
     priority: 1000,
+    comment: {
+      ru: 'Основной язык программирования',
+      ua: 'Основна мова програмування',
+      en: 'Main programming language',
+    },
   },
   {
     name: 'Angular 2+',
@@ -28,13 +38,18 @@ export const techSkills: TechSkill[] = [
     knowledgeRating: 8,
     lastUse: 'now',
     experienceInYears: 0.5,
-    priority: 1002,
+    priority: 2000,
+    comment: {
+      ru: 'Любимый фреймворк',
+      ua: 'Улюблений фреймворк',
+      en: 'Favorite framework',
+    },
   },
   {
     name: 'Angular Material',
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Material_Design_Logo.svg/220px-Google_Material_Design_Logo.svg.png',
-    type: [TechSkillCategory.interfaces, TechSkillCategory.layout],
+    type: [TechSkillCategory.layout],
     knowledgeRating: 8,
     lastUse: 'now',
     experienceInYears: 0.5,
@@ -47,7 +62,7 @@ export const techSkills: TechSkill[] = [
     knowledgeRating: 7,
     lastUse: 'now',
     experienceInYears: 0.5,
-    priority: 1001,
+    priority: 1999,
   },
   {
     name: 'NgRx',
@@ -56,7 +71,7 @@ export const techSkills: TechSkill[] = [
     knowledgeRating: 7,
     lastUse: 'now',
     experienceInYears: 0.5,
-    priority: 1001,
+    priority: 1998,
   },
   {
     name: 'Redux',
@@ -65,7 +80,12 @@ export const techSkills: TechSkill[] = [
     knowledgeRating: 9,
     lastUse: 'now',
     experienceInYears: 1,
-    priority: 1001,
+    priority: 1500,
+    comment: {
+      ru: 'В том числе redux-thunk и redux-saga',
+      ua: 'У тому числі redux-thunk і redux-saga',
+      en: 'Including redux-thunk and redux-saga',
+    },
   },
   {
     name: 'React',
@@ -74,13 +94,18 @@ export const techSkills: TechSkill[] = [
     knowledgeRating: 7,
     lastUse: new Date(1606780800000),
     experienceInYears: 1,
-    priority: 999,
+    priority: 1501,
+    comment: {
+      ru: 'В том числе и на TypeScript, с ипользованием хуков',
+      ua: 'У тому числі і на TypeScript, з використанням хуков',
+      en: 'Including TypeScript, using hooks',
+    },
   },
   {
     name: 'Material-UI (React)',
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Material_Design_Logo.svg/220px-Google_Material_Design_Logo.svg.png',
-    type: [TechSkillCategory.interfaces, TechSkillCategory.layout],
+    type: [TechSkillCategory.layout],
     knowledgeRating: 8,
     lastUse: new Date(1606780800000),
     experienceInYears: 0.5,
@@ -114,6 +139,11 @@ export const techSkills: TechSkill[] = [
     lastUse: new Date(1598918400000),
     experienceInYears: 0.3,
     priority: 998,
+    comment: {
+      ru: 'Прошла базу для понимания процессов',
+      ua: 'Пройшла базу для розуміння процесів',
+      en: 'Passed the base for understanding the processes',
+    },
   },
   {
     name: 'MongoDB',
@@ -124,6 +154,11 @@ export const techSkills: TechSkill[] = [
     lastUse: new Date(1598918400000),
     experienceInYears: 0.3,
     priority: 998,
+    comment: {
+      ru: 'Прошла базу для понимания процессов',
+      ua: 'Пройшла базу для розуміння процесів',
+      en: 'Passed the base for understanding the processes',
+    },
   },
   {
     name: 'MySQL',
@@ -134,6 +169,11 @@ export const techSkills: TechSkill[] = [
     lastUse: new Date(1583020800000),
     experienceInYears: 1,
     priority: 998,
+    comment: {
+      ru: 'Прошла базу для понимания процессов',
+      ua: 'Пройшла базу для розуміння процесів',
+      en: 'Passed the base for understanding the processes',
+    },
   },
   {
     name: 'Git',
@@ -151,8 +191,13 @@ export const techSkills: TechSkill[] = [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Dart-logo.png/768px-Dart-logo.png',
     knowledgeRating: 5,
     lastUse: new Date(1606780800000),
-    experienceInYears: 0.4,
+    experienceInYears: 0.2,
     priority: 998,
+    comment: {
+      ru: 'Прошла базу для понимания процессов',
+      ua: 'Пройшла базу для розуміння процесів',
+      en: 'Passed the base for understanding the processes',
+    },
   },
   {
     name: 'Flutter',
@@ -161,8 +206,13 @@ export const techSkills: TechSkill[] = [
       'https://strattonapps.com/wp-content/uploads/2020/02/flutter-logo-5086DD11C5-seeklogo.com_.png',
     knowledgeRating: 5,
     lastUse: new Date(1606780800000),
-    experienceInYears: 0.4,
-    priority: 998,
+    experienceInYears: 0.2,
+    priority: 950,
+    comment: {
+      ru: 'Прошла базу для понимания процессов',
+      ua: 'Пройшла базу для розуміння процесів',
+      en: 'Passed the base for understanding the processes',
+    },
   },
   {
     name: 'GSAP',
@@ -179,9 +229,9 @@ export const techSkills: TechSkill[] = [
     type: [TechSkillCategory.layout],
     image: 'https://miro.medium.com/max/320/0*_rAD9NgK7l6KSlNc.png',
     knowledgeRating: 6,
-    lastUse: 'now',
+    lastUse: new Date(1575158400000),
     experienceInYears: 0.5,
-    priority: 1000,
+    priority: 900,
   },
   {
     name: 'Karma + Jasmine',
@@ -209,12 +259,22 @@ export const techSkills: TechSkill[] = [
     knowledgeRating: 7,
     lastUse: 'now',
     experienceInYears: 0.5,
-    priority: 1000,
+    priority: 1005,
   },
   {
     name: 'Pug',
     type: [TechSkillCategory.layout],
     image: 'https://cdn.worldvectorlogo.com/logos/pug.svg',
+    knowledgeRating: 9,
+    lastUse: 'now',
+    experienceInYears: 3,
+    priority: 1000,
+  },
+  {
+    name: 'Handlebars',
+    type: [TechSkillCategory.layout],
+    image:
+      'https://lh3.googleusercontent.com/proxy/ZgD6gZsVljFuRM-lXLVPk7A6ahbi0ubQUp3YrlZZigjPQ5SQPsuHvnOYQxEk5TaIPNIdT9mixubwhaewCTViumRmcZqXd3-Hg3KokED4L765TN8tn2Fg_xw',
     knowledgeRating: 9,
     lastUse: 'now',
     experienceInYears: 3,
@@ -238,6 +298,14 @@ export const techSkills: TechSkill[] = [
     lastUse: 'now',
     experienceInYears: 1,
     priority: 1000,
+    comment: {
+      ru:
+        'Используется в проектах с простым наполнением, где фреймворк будет излишним',
+      ua:
+        'Використовується в проектах з простим наповненням, де фреймворк буде зайвим',
+      en:
+        'Used in projects with simple content, where the framework will be redundant',
+    },
   },
   {
     name: 'Gulp',
@@ -284,8 +352,13 @@ export const techSkills: TechSkill[] = [
     image: 'https://cdn.iconscout.com/icon/free/png-256/laravel-226015.png',
     knowledgeRating: 4,
     lastUse: new Date(1583020800000),
-    experienceInYears: 0.5,
+    experienceInYears: 0.3,
     priority: 998,
+    comment: {
+      ru: 'Прошла базу для понимания процессов',
+      ua: 'Пройшла базу для розуміння процесів',
+      en: 'Passed the base for understanding the processes',
+    },
   },
   {
     name: 'PHP',
@@ -293,8 +366,13 @@ export const techSkills: TechSkill[] = [
     image: 'https://pngimg.com/uploads/php/php_PNG43.png',
     knowledgeRating: 4,
     lastUse: new Date(1583020800000),
-    experienceInYears: 0.5,
+    experienceInYears: 0.7,
     priority: 998,
+    comment: {
+      ru: 'Прошла базу для понимания процессов',
+      ua: 'Пройшла базу для розуміння процесів',
+      en: 'Passed the base for understanding the processes',
+    },
   },
   {
     name: 'Webstorm',
@@ -312,9 +390,9 @@ export const techSkills: TechSkill[] = [
     image:
       'https://2.bp.blogspot.com/-tzm1twY_ENM/XlCRuI0ZkRI/AAAAAAAAOso/BmNOUANXWxwc5vwslNw3WpjrDlgs9PuwQCLcBGAsYHQ/s1600/pasted%2Bimage%2B0.png',
     knowledgeRating: 7,
-    lastUse: 'now',
-    experienceInYears: 0.4,
-    priority: 1000,
+    lastUse: new Date(1606780800000),
+    experienceInYears: 0.2,
+    priority: 950,
   },
   {
     name: 'VS Code',
@@ -345,6 +423,11 @@ export const techSkills: TechSkill[] = [
     lastUse: 'now',
     experienceInYears: 6,
     priority: 1000,
+    comment: {
+      ru: 'Умею не только использовать элементы макета, но и создавать их',
+      ua: 'Вмію не тільки використовувати елементи макета, але і створювати їх',
+      en: 'I can not only use layout elements, but also create them',
+    },
   },
   {
     name: 'Illustrator',
@@ -355,6 +438,11 @@ export const techSkills: TechSkill[] = [
     lastUse: 'now',
     experienceInYears: 5,
     priority: 1000,
+    comment: {
+      ru: 'Умею не только использовать элементы макета, но и создавать их',
+      ua: 'Вмію не тільки використовувати елементи макета, але і створювати їх',
+      en: 'I can not only use layout elements, but also create them',
+    },
   },
   {
     name: 'Animate',
@@ -365,6 +453,11 @@ export const techSkills: TechSkill[] = [
     lastUse: new Date(1585778396000),
     experienceInYears: 1,
     priority: 1000,
+    comment: {
+      ru: 'Владею навыками анимации (в том числе и SVG), благодаря образованию',
+      ua: 'Володію навичками анімації (в тому числі і SVG), завдяки освіті',
+      en: 'I have skills in animation (including SVG), thanks to education',
+    },
   },
   {
     name: 'Google Web Designer',
@@ -375,6 +468,11 @@ export const techSkills: TechSkill[] = [
     lastUse: new Date(1585778396000),
     experienceInYears: 0.4,
     priority: 1000,
+    comment: {
+      ru: 'Владею навыками анимации (в том числе и SVG), благодаря образованию',
+      ua: 'Володію навичками анімації (в тому числі і SVG), завдяки освіті',
+      en: 'I have skills in animation (including SVG), thanks to education',
+    },
   },
   {
     name: 'Google Analytics',
@@ -385,6 +483,13 @@ export const techSkills: TechSkill[] = [
     lastUse: new Date(1585778396000),
     experienceInYears: 2,
     priority: 1000,
+    comment: {
+      ru:
+        'Работала маркетологом и могу не только подключать, но и использовать',
+      ua:
+        'Працювала маркетологом і можу не тільки підключати, але і використовувати',
+      en: 'I worked as a marketer and can not only connect, but also use',
+    },
   },
   {
     name: 'Google Tag Manager',
@@ -395,6 +500,13 @@ export const techSkills: TechSkill[] = [
     lastUse: new Date(1585778396000),
     experienceInYears: 1,
     priority: 1000,
+    comment: {
+      ru:
+        'Работала маркетологом и могу не только подключать, но и использовать',
+      ua:
+        'Працювала маркетологом і можу не тільки підключати, але і використовувати',
+      en: 'I worked as a marketer and can not only connect, but also use',
+    },
   },
   {
     name: 'Google Search Console',
@@ -404,6 +516,13 @@ export const techSkills: TechSkill[] = [
     lastUse: new Date(1585778396000),
     experienceInYears: 1,
     priority: 1000,
+    comment: {
+      ru:
+        'Работала маркетологом и могу не только подключать, но и использовать',
+      ua:
+        'Працювала маркетологом і можу не тільки підключати, але і використовувати',
+      en: 'I worked as a marketer and can not only connect, but also use',
+    },
   },
   {
     name: 'Yandex Metrika',
@@ -414,6 +533,13 @@ export const techSkills: TechSkill[] = [
     lastUse: new Date(1585778396000),
     experienceInYears: 1,
     priority: 1000,
+    comment: {
+      ru:
+        'Работала маркетологом и могу не только подключать, но и использовать',
+      ua:
+        'Працювала маркетологом і можу не тільки підключати, але і використовувати',
+      en: 'I worked as a marketer and can not only connect, but also use',
+    },
   },
   {
     name: 'Yandex Webmaster',
@@ -423,6 +549,13 @@ export const techSkills: TechSkill[] = [
     lastUse: new Date(1585778396000),
     experienceInYears: 1,
     priority: 1000,
+    comment: {
+      ru:
+        'Работала маркетологом и могу не только подключать, но и использовать',
+      ua:
+        'Працювала маркетологом і можу не тільки підключати, але і використовувати',
+      en: 'I worked as a marketer and can not only connect, but also use',
+    },
   },
   {
     name: 'Facebook Analytics',
@@ -432,6 +565,33 @@ export const techSkills: TechSkill[] = [
     knowledgeRating: 7,
     lastUse: new Date(1585778396000),
     experienceInYears: 1,
+    priority: 1000,
+    comment: {
+      ru:
+        'Работала маркетологом и могу не только подключать, но и использовать',
+      ua:
+        'Працювала маркетологом і можу не тільки підключати, але і використовувати',
+      en: 'I worked as a marketer and can not only connect, but also use',
+    },
+  },
+  {
+    name: 'jQuery',
+    type: [TechSkillCategory.layout],
+    image:
+      'https://lh3.googleusercontent.com/proxy/bb2J_grGaT91bvjF88VuyvjgH8-VazApOsD1P_hp7N8EdlwwPO--M4TVPdTXbXwmfMDhUohbnkKQ-X0c13Y',
+    knowledgeRating: 8,
+    lastUse: new Date(1585778396000),
+    experienceInYears: 1,
+    priority: 900,
+  },
+  {
+    name: 'Vue',
+    type: [TechSkillCategory.interfaces],
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png',
+    knowledgeRating: 5,
+    lastUse: new Date(1593561600000),
+    experienceInYears: 0.2,
     priority: 1000,
   },
 ];

@@ -1,3 +1,5 @@
+import { LanguageVariation } from './LanguageVariation';
+
 export enum TechSkillCategory {
   languages,
   interfaces,
@@ -18,4 +20,5 @@ export interface TechSkill {
   lastUse?: Date | null | 'now';
   experienceInYears: number;
   priority?: number;
+  comment?: LanguageVariation;
 }
