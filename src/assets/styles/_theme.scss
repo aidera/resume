@@ -48,6 +48,12 @@ main {
     padding-bottom: 10px;
     display: block;
     margin-bottom: 48px;
+    @media (max-width: $bp-sm) {
+      font-size: 28px;
+    }
+    @media (max-width: $bp-xs) {
+      font-size: 24px;
+    }
     &:before {
       content: ' ';
       position: absolute;
@@ -67,6 +73,9 @@ main {
     padding-bottom: 10px;
     display: block;
     margin-bottom: 24px;
+    @media (max-width: $bp-xs) {
+      font-size: 18px;
+    }
   }
 }
 

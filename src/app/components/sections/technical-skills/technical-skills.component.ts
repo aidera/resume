@@ -10,7 +10,9 @@ import { TechSkillCategory } from 'src/app/models/Skill';
 })
 export class TechnicalSkillsComponent implements OnInit {
   public skills = techSkills.sort((a, b) => {
-    return b.priority - a.priority;
+    const skillAPriority = a.priority ? a.priority : 0;
+    const skillBPriority = b.priority ? b.priority : 0;
+    return skillBPriority - skillAPriority;
   });
   public techSkillCategories = Object.keys(TechSkillCategory).slice(
     0,

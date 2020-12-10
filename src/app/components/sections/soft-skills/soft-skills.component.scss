@@ -1,0 +1,27 @@
+@import '../../../../assets/styles/_variables';
+
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 32px;
+  @media (max-width: $bp-lg) {
+    grid-template-columns: 1fr;
+  }
+
+  .skill {
+    display: flex;
+    .image {
+      margin-right: 24px;
+      img {
+        width: 48px;
+      }
+    }
+    .content {
+      h4 {
+        font-weight: 500;
+        font-size: 18px;
+      }
+    }
+  }
+}

@@ -9,7 +9,7 @@
     grid-column-gap: 24px;
     grid-row-gap: 32px;
     margin-bottom: 56px;
-    @media (max-width: $bp-md) {
+    @media (max-width: $bp-lg) {
       grid-template-columns: 1fr;
     }
 

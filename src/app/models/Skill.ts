@@ -24,3 +24,10 @@ export interface TechSkill {
   comment?: LanguageVariation;
   certificates?: Certificate[];
 }
+
+export interface SoftSkill {
+  name: LanguageVariation;
+  icon: string;
+  comment?: LanguageVariation;
+  priority?: number;
+}
