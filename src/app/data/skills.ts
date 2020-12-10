@@ -29,6 +29,17 @@ export const techSkills: TechSkill[] = [
       ua: 'Основна мова програмування',
       en: 'Main programming language',
     },
+    certificates: [
+      {
+        name: {
+          ru: 'Значок оценки навыков JavaScript от LinkedIn',
+          ua: 'Значок оцінки навичок JavaScript від LinkedIn',
+          en: 'LinkedIn JavaScript Skills Badge',
+        },
+        link:
+          'https://www.linkedin.com/in/evgenia-mikhaleva-2a3bb6181/detail/assessments/JavaScript/report/',
+      },
+    ],
   },
   {
     name: 'Angular 2+',
@@ -44,6 +55,18 @@ export const techSkills: TechSkill[] = [
       ua: 'Улюблений фреймворк',
       en: 'Favorite framework',
     },
+    certificates: [
+      {
+        name: {
+          ru: 'Сертификация Angular об окончании курса от Владилена Минина',
+          ua: 'Сертифікація Angular про закінчення курсу від Владилена Мініна',
+          en: 'Angular Certification on Course Completion from Vladilen Minin',
+        },
+        link:
+          'https://www.udemy.com/certificate/UC-07be31b4-bb3c-40e9-a514-42cd92384849/',
+        date: new Date(1600992000000),
+      },
+    ],
   },
   {
     name: 'Angular Material',
@@ -75,7 +98,7 @@ export const techSkills: TechSkill[] = [
   },
   {
     name: 'Redux',
-    image: 'https://assets.stickpng.com/images/5848309bcef1014c0b5e4a9a.png',
+    image: 'https://ariol.by/ariolby/img/redux-2.svg',
     type: [TechSkillCategory.interfaces],
     knowledgeRating: 9,
     lastUse: 'now',
@@ -119,7 +142,18 @@ export const techSkills: TechSkill[] = [
     knowledgeRating: 10,
     lastUse: 'now',
     experienceInYears: 3,
-    priority: 999,
+    priority: 1003,
+    certificates: [
+      {
+        name: {
+          ru: 'Значок оценки навыков HTML от LinkedIn',
+          ua: 'Значок оцінки навичок HTML від LinkedIn',
+          en: 'LinkedIn HTML Skills Badge',
+        },
+        link:
+          'https://www.linkedin.com/in/evgenia-mikhaleva-2a3bb6181/detail/assessments/HTML/report/',
+      },
+    ],
   },
   {
     name: 'CSS3',
@@ -128,7 +162,18 @@ export const techSkills: TechSkill[] = [
     knowledgeRating: 10,
     lastUse: 'now',
     experienceInYears: 3,
-    priority: 999,
+    priority: 1003,
+    certificates: [
+      {
+        name: {
+          ru: 'Значок оценки навыков CSS3 от LinkedIn',
+          ua: 'Значок оцінки навичок CSS3 від LinkedIn',
+          en: 'LinkedIn CSS3 Skills Badge',
+        },
+        link:
+          'https://www.linkedin.com/in/evgenia-mikhaleva-2a3bb6181/detail/assessments/CSS3/report/',
+      },
+    ],
   },
   {
     name: 'Node.js',
@@ -198,6 +243,19 @@ export const techSkills: TechSkill[] = [
       ua: 'Пройшла базу для розуміння процесів',
       en: 'Passed the base for understanding the processes',
     },
+    certificates: [
+      {
+        name: {
+          ru: 'Сертификация Flutter & Dart об окончании курса от Academind',
+          ua: 'Сертифікація Flutter & Dart про закінчення курсу від Academind',
+          en:
+            'Flutter & Dart Certification on Course Completion from Academind',
+        },
+        link:
+          'https://www.udemy.com/certificate/UC-cfdfee18-d4bb-4445-8cc1-f4f7d62bf7eb/',
+        date: new Date(1601769600000),
+      },
+    ],
   },
   {
     name: 'Flutter',
@@ -213,6 +271,19 @@ export const techSkills: TechSkill[] = [
       ua: 'Пройшла базу для розуміння процесів',
       en: 'Passed the base for understanding the processes',
     },
+    certificates: [
+      {
+        name: {
+          ru: 'Сертификация Flutter & Dart об окончании курса от Academind',
+          ua: 'Сертифікація Flutter & Dart про закінчення курсу від Academind',
+          en:
+            'Flutter & Dart Certification on Course Completion from Academind',
+        },
+        link:
+          'https://www.udemy.com/certificate/UC-cfdfee18-d4bb-4445-8cc1-f4f7d62bf7eb/',
+        date: new Date(1601769600000),
+      },
+    ],
   },
   {
     name: 'GSAP',
@@ -490,6 +561,37 @@ export const techSkills: TechSkill[] = [
         'Працювала маркетологом і можу не тільки підключати, але і використовувати',
       en: 'I worked as a marketer and can not only connect, but also use',
     },
+    certificates: [
+      {
+        name: {
+          ru: 'Google Analytics Individual Qualification',
+          ua: 'Google Analytics Individual Qualification',
+          en: 'Google Analytics Individual Qualification',
+        },
+        link: 'https://skillshop.exceedlms.com/student/award/38333364',
+        date: new Date(1570838400000),
+      },
+      {
+        name: {
+          ru: 'Google Analytics для начинающих',
+          ua: 'Google Analytics для початківців',
+          en: 'Google Analytics for Beginners',
+        },
+        link:
+          'https://analytics.google.com/analytics/academy/certificate/eNaK9h8aQ4maqP6FfMyTWg',
+        date: new Date(1569628800000),
+      },
+      {
+        name: {
+          ru: 'Расширенный курс по Google Аналитике',
+          ua: 'Розширений курс по Google Аналітиці',
+          en: 'Advanced Google Analytics Course',
+        },
+        link:
+          'https://analytics.google.com/analytics/academy/certificate/S-id5GHvSAGuWEG7X5H21A',
+        date: new Date(1570924800000),
+      },
+    ],
   },
   {
     name: 'Google Tag Manager',

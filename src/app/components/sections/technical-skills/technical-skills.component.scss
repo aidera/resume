@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 24px;
-    grid-row-gap: 24px;
+    grid-row-gap: 32px;
     margin-bottom: 56px;
     @media (max-width: $bp-md) {
       grid-template-columns: 1fr;
@@ -19,6 +19,7 @@
       .image {
         max-width: 60px;
         margin-right: 20px;
+
         img {
           width: 100%;
         }
@@ -34,13 +35,40 @@
           display: flex;
           margin-top: 8px;
           margin-bottom: 4px;
+
           span {
             margin-right: 4px;
             height: 4px;
             width: 16px;
             background-color: lightgray;
+
             &.active {
               background-color: $color-primary;
+            }
+          }
+        }
+
+        .certificates {
+          a {
+            display: block;
+            position: relative;
+            //padding-left: 24px;
+            font-weight: 500;
+            color: $color-primary;
+            &:hover {
+              text-decoration: underline;
+            }
+            &:before {
+              content: ' ';
+              background-image: url('../../../../assets/icons/star.svg');
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center center;
+              width: 16px;
+              height: 16px;
+              position: absolute;
+              left: -24px;
+              top: 4px;
             }
           }
         }
@@ -48,7 +76,6 @@
         .comment {
           font-style: italic;
           font-size: 0.8rem;
-          margin-top: 4px;
         }
       }
     }

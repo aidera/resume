@@ -1,4 +1,5 @@
 import { LanguageVariation } from './LanguageVariation';
+import { Certificate } from './Certificate';
 
 export enum TechSkillCategory {
   languages,
@@ -21,4 +22,5 @@ export interface TechSkill {
   experienceInYears: number;
   priority?: number;
   comment?: LanguageVariation;
+  certificates?: Certificate[];
 }

@@ -53,6 +53,14 @@
               }}
             </div>
 
+            <div class="certificates" *ngIf="skill.certificates">
+              <ng-container *ngFor="let certificate of skill.certificates">
+                <a [href]="certificate.link" target="_blank">{{
+                  certificate.name.ru
+                }}</a>
+              </ng-container>
+            </div>
+
             <div class="comment" *ngIf="skill.comment">
               {{ skill.comment.ru }}
             </div>
