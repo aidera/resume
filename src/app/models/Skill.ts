@@ -10,14 +10,14 @@ export enum TechSkillCategory {
   backend,
   editors,
   design,
-  promotion,
+  // other,
 }
 
 export interface TechSkill {
   name: string;
   image: string;
   type: TechSkillCategory[];
-  knowledgeRating: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+  knowledgeRating: 0 | 1 | 2 | 3 | 4 | 5;
   lastUse?: Date | null | 'now';
   experienceInYears: number;
   priority?: number;

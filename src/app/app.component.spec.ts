@@ -11,8 +11,8 @@ import { EducationComponent } from './components/sections/education/education.co
 import { LastWordsComponent } from './components/sections/last-words/last-words.component';
 import { PlacesOfWorkComponent } from './components/sections/places-of-work/places-of-work.component';
 import { ProjectsComponent } from './components/sections/projects/projects.component';
-import { SoftSkillsComponent } from './components/sections/soft-skills/soft-skills.component';
-import { TechnicalSkillsComponent } from './components/sections/technical-skills/technical-skills.component';
+import { AboutMeComponent } from './components/sections/about-me/about-me.component';
+import { SkillsComponent } from './components/sections/skills/skills.component';
 import { HeaderDynamicComponent } from './components/header-dynamic/header-dynamic.component';
 
 describe('AppComponent', () => {
@@ -31,8 +31,8 @@ describe('AppComponent', () => {
         LastWordsComponent,
         PlacesOfWorkComponent,
         ProjectsComponent,
-        SoftSkillsComponent,
-        TechnicalSkillsComponent,
+        AboutMeComponent,
+        SkillsComponent,
       ],
     }).compileComponents();
   }));

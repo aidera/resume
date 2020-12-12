@@ -4,11 +4,11 @@ import { techSkills } from '../../../data/skills';
 import { TechSkillCategory } from 'src/app/models/Skill';
 
 @Component({
-  selector: 'app-technical-skills',
-  templateUrl: './technical-skills.component.html',
-  styleUrls: ['./technical-skills.component.scss'],
+  selector: 'app-skills',
+  templateUrl: './skills.component.html',
+  styleUrls: ['./skills.component.scss'],
 })
-export class TechnicalSkillsComponent implements OnInit {
+export class SkillsComponent implements OnInit {
   public skills = techSkills.sort((a, b) => {
     const skillAPriority = a.priority ? a.priority : 0;
     const skillBPriority = b.priority ? b.priority : 0;

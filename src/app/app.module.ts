@@ -9,8 +9,8 @@ import localeRu from '@angular/common/locales/ru';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { TechnicalSkillsComponent } from './components/sections/technical-skills/technical-skills.component';
-import { SoftSkillsComponent } from './components/sections/soft-skills/soft-skills.component';
+import { SkillsComponent } from './components/sections/skills/skills.component';
+import { AboutMeComponent } from './components/sections/about-me/about-me.component';
 import { EducationComponent } from './components/sections/education/education.component';
 import { PlacesOfWorkComponent } from './components/sections/places-of-work/places-of-work.component';
 import { ProjectsComponent } from './components/sections/projects/projects.component';
@@ -29,8 +29,8 @@ registerLocaleData(localeRu, 'ru');
     AppComponent,
     HeaderComponent,
     SidebarComponent,
-    TechnicalSkillsComponent,
-    SoftSkillsComponent,
+    SkillsComponent,
+    AboutMeComponent,
     EducationComponent,
     PlacesOfWorkComponent,
     ProjectsComponent,

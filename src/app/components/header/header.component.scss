@@ -48,6 +48,10 @@ header {
     }
   }
 
+  * {
+    color: white;
+  }
+
   a {
     transition: $transition-1;
 
@@ -115,6 +119,10 @@ header {
           }
         }
       }
+
+      //.description {
+      //  margin-top: 32px;
+      //}
 
       .actions {
         margin-top: 32px;

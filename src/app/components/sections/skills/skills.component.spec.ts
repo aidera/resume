@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SoftSkillsComponent } from './soft-skills.component';
-import { softSkills } from '../../../data/skills';
+import { SkillsComponent } from './skills.component';
+import { techSkills } from '../../../data/skills';
 import { By } from '@angular/platform-browser';
 
-describe('SoftSkillsComponent', () => {
-  let component: SoftSkillsComponent;
-  let fixture: ComponentFixture<SoftSkillsComponent>;
+describe('TechnicalSkillsComponent', () => {
+  let component: SkillsComponent;
+  let fixture: ComponentFixture<SkillsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SoftSkillsComponent],
+      declarations: [SkillsComponent],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SoftSkillsComponent);
+    fixture = TestBed.createComponent(SkillsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -24,8 +24,13 @@ describe('SoftSkillsComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  // TODO: should display categories test
+  // it('should display categories', () => {
+  //   expect(component).toBeTruthy();
+  // });
+
   it('should display skills', () => {
-    component.skills = softSkills;
+    component.skills = techSkills;
     fixture.detectChanges();
 
     const skillElement = fixture.debugElement.query(

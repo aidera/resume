@@ -1,7 +1,10 @@
 @import '../../../../assets/styles/_variables';
 
 .skills-group {
-  margin-top: 80px;
+  margin-bottom: 80px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   .skills-list {
     display: grid;
@@ -39,7 +42,7 @@
           span {
             margin-right: 4px;
             height: 4px;
-            width: 16px;
+            width: 32px;
             background-color: lightgray;
 
             &.active {

@@ -1,5 +1,5 @@
 <section>
-  <h2>Технические навыки</h2>
+  <h2>Навыки</h2>
 
   <div class="skills-group" *ngFor="let category of techSkillCategories">
     <ng-container [ngSwitch]="category">
@@ -11,7 +11,7 @@
       <h3 *ngSwitchCase="5">Серверная часть</h3>
       <h3 *ngSwitchCase="6">Редакторы</h3>
       <h3 *ngSwitchCase="7">Дизайн</h3>
-      <h3 *ngSwitchCase="8">Продвижение</h3>
+      <h3 *ngSwitchCase="8">Другие</h3>
     </ng-container>
 
     <div class="skills-list">
@@ -26,7 +26,7 @@
 
             <div class="rate" *ngIf="skill.knowledgeRating !== null">
               <span
-                *ngFor="let rateUnit of [].constructor(10); let i = index"
+                *ngFor="let rateUnit of [].constructor(5); let i = index"
                 [class.active]="i < skill.knowledgeRating"
               ></span>
             </div>

@@ -1,0 +1,19 @@
+@import '../../../../assets/styles/_variables';
+
+ul {
+  li {
+    margin-bottom: 16px;
+    padding-left: 32px;
+    position: relative;
+    &:after {
+      content: ' ';
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 6px;
+      left: 0;
+      background-color: $color-primary;
+      border-radius: 50%;
+    }
+  }
+}
