@@ -1,10 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { SkillsComponent } from './skills.component';
-import { techSkills } from '../../../data/skills';
 import { By } from '@angular/platform-browser';
 
-describe('TechnicalSkillsComponent', () => {
+import { SkillsComponent } from './skills.component';
+import { skills, skillTypes } from '../../../data/skills';
+
+describe('SkillsComponent', () => {
   let component: SkillsComponent;
   let fixture: ComponentFixture<SkillsComponent>;
 
@@ -24,13 +24,20 @@ describe('TechnicalSkillsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // TODO: should display categories test
-  // it('should display categories', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should display categories', () => {
+    component.skillTypes = skillTypes;
+    component.skills = skills;
+    fixture.detectChanges();
+
+    const element = fixture.debugElement.query(By.css('.skills-group'))
+      .nativeElement;
+
+    expect(element.textContent).toContain(skillTypes[0].title.ru);
+  });
 
   it('should display skills', () => {
-    component.skills = techSkills;
+    component.skillTypes = skillTypes;
+    component.skills = skills;
     fixture.detectChanges();
 
     const skillElement = fixture.debugElement.query(

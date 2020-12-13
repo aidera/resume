@@ -1,33 +1,21 @@
 import { LanguageVariation } from './LanguageVariation';
-import { Certificate } from './Certificate';
+import { Certificate } from './Education';
 
-export enum TechSkillCategory {
-  languages,
-  interfaces,
-  layout,
-  testing,
-  optimization,
-  backend,
-  editors,
-  design,
-  // other,
+export interface SkillType {
+  id: string;
+  title: LanguageVariation;
+  priority: number;
 }
 
-export interface TechSkill {
-  name: string;
-  image: string;
-  type: TechSkillCategory[];
+export interface Skill {
+  id: string;
+  title: LanguageVariation;
+  image?: string;
+  typeIds: string[];
   knowledgeRating: 0 | 1 | 2 | 3 | 4 | 5;
-  lastUse?: Date | null | 'now';
-  experienceInYears: number;
-  priority?: number;
+  lastUse?: Date | 'now';
+  experienceInYears?: number;
+  priority: number;
   comment?: LanguageVariation;
   certificates?: Certificate[];
-}
-
-export interface SoftSkill {
-  name: LanguageVariation;
-  icon: string;
-  comment?: LanguageVariation;
-  priority?: number;
 }

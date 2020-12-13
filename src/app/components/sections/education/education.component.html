@@ -1,1 +1,130 @@
-<section>education works!</section>
+<section>
+  <h2>Образование</h2>
+  <div class="education-list higher-education-list">
+    <div class="education" *ngFor="let higherEducation of higherEducations">
+      <div class="image" *ngIf="higherEducation.icon">
+        <img [src]="higherEducation.icon" [alt]="higherEducation.title.ru" />
+      </div>
+
+      <div class="content">
+        <h4>{{ higherEducation.title.ru }}</h4>
+
+        <div class="place" *ngIf="higherEducation.place">
+          <a
+            *ngIf="higherEducation.placeLink; else placeNoLink"
+            [href]="higherEducation.placeLink"
+            target="_blank"
+          >
+            {{ higherEducation.place.ru }}
+          </a>
+          <ng-template #placeNoLink>
+            <p>{{ higherEducation.place.ru }}</p>
+          </ng-template>
+        </div>
+
+        <div
+          class="dates"
+          *ngIf="higherEducation.dateFrom || higherEducation.dateTo"
+        >
+          {{
+            higherEducation.dateFrom && higherEducation.dateTo
+              ? (higherEducation.dateFrom | date: 'y') +
+                ' - ' +
+                (higherEducation.dateTo | date: 'y')
+              : higherEducation.dateFrom !== undefined
+              ? (higherEducation.dateFrom | date: 'y')
+              : (higherEducation.dateTo | date: 'y')
+          }}
+        </div>
+
+        <div class="comment" *ngIf="higherEducation.comment">
+          {{ higherEducation.comment.ru }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Курсы</h3>
+  <div class="education-list courses-list">
+    <div class="education" *ngFor="let course of courses">
+      <div class="image" *ngIf="course.icon">
+        <img [src]="course.icon" [alt]="course.title.ru" />
+      </div>
+
+      <div class="content">
+        <h4>{{ course.title.ru }}</h4>
+
+        <div class="place" *ngIf="course.place">
+          <a
+            *ngIf="course.placeLink; else placeNoLink"
+            [href]="course.placeLink"
+            target="_blank"
+          >
+            {{ course.place.ru }}
+          </a>
+          <ng-template #placeNoLink>
+            <p>{{ course.place.ru }}</p>
+          </ng-template>
+        </div>
+
+        <div class="certificate" *ngIf="course.certificate">
+          <a [href]="course.certificate.link">Сертификат</a>
+        </div>
+
+        <div class="dates" *ngIf="course.dateFrom || course.dateTo">
+          {{
+            course.dateFrom && course.dateTo
+              ? (course.dateFrom | date: 'MMM y') +
+                ' - ' +
+                (course.dateTo | date: 'MMM y')
+              : course.dateFrom !== undefined
+              ? 'Дата начала обучения: ' + (course.dateFrom | date: 'MMM y')
+              : 'Дата окончания обучения: ' + (course.dateTo | date: 'MMM y')
+          }}
+        </div>
+
+        <div class="comment" *ngIf="course.comment">
+          {{ course.comment.ru }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Сертификаты</h3>
+  <div class="education-list certificates-list">
+    <div class="education" *ngFor="let certificate of certificates">
+      <div class="image" *ngIf="certificate.icon">
+        <img [src]="certificate.icon" [alt]="certificate.title.ru" />
+      </div>
+
+      <div class="content">
+        <h4>{{ certificate.title.ru }}</h4>
+
+        <div class="place" *ngIf="certificate.place">
+          <a
+            *ngIf="certificate.placeLink; else placeNoLink"
+            [href]="certificate.placeLink"
+            target="_blank"
+          >
+            {{ certificate.place.ru }}
+          </a>
+          <ng-template #placeNoLink>
+            <p>{{ certificate.place.ru }}</p>
+          </ng-template>
+        </div>
+
+        <div class="certificate" *ngIf="certificate.link">
+          <a [href]="certificate.link">Подтверждение</a>
+        </div>
+
+        <div class="dates" *ngIf="certificate.receivingDate">
+          Дата получения: {{ certificate.receivingDate | date: 'dd MMM y' }}
+        </div>
+
+        <div class="comment" *ngIf="certificate.comment">
+          {{ certificate.comment.ru }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

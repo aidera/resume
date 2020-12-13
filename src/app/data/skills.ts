@@ -1,10 +1,99 @@
-import { SoftSkill, TechSkill, TechSkillCategory } from '../models/Skill';
+import { Skill, SkillType } from '../models/Skill';
 
-export const techSkills: TechSkill[] = [
+export const skillTypes: SkillType[] = [
+  // {
+  //   id: 'other',
+  //   title: {
+  //     ru: 'Другие',
+  //     ua: 'Інші',
+  //     en: 'Others'
+  //   },
+  //   priority: 0,
+  // },
   {
-    name: 'TypeScript',
+    id: 'languages',
+    title: {
+      ru: 'Языки программирования',
+      ua: 'Мови програмування',
+      en: 'Programming languages',
+    },
+    priority: 1000,
+  },
+  {
+    id: 'interfaces',
+    title: {
+      ru: 'Создание интерфейсов',
+      ua: 'Створення інтерфейсів',
+      en: 'Interface creating',
+    },
+    priority: 999,
+  },
+  {
+    id: 'layout',
+    title: {
+      ru: 'Вёрстка',
+      ua: 'Верстка',
+      en: 'Layout',
+    },
+    priority: 998,
+  },
+  {
+    id: 'testing',
+    title: {
+      ru: 'Тестирование',
+      ua: 'Тестування',
+      en: 'Testing',
+    },
+    priority: 997,
+  },
+  {
+    id: 'optimization',
+    title: {
+      ru: 'Оптимизация',
+      ua: 'Оптимізація',
+      en: 'Optimization',
+    },
+    priority: 996,
+  },
+  {
+    id: 'backend',
+    title: {
+      ru: 'Серверная часть',
+      ua: 'Серверна частина',
+      en: 'Backend',
+    },
+    priority: 995,
+  },
+  {
+    id: 'editors',
+    title: {
+      ru: 'Редакторы',
+      ua: 'Редактори',
+      en: 'Editors',
+    },
+    priority: 994,
+  },
+  {
+    id: 'design',
+    title: {
+      ru: 'Дизайн',
+      ua: 'Дизайн',
+      en: 'Design',
+    },
+    priority: 993,
+  },
+];
+
+export const skills: Skill[] = [
+  {
+    id: 'TypeScript',
+    title: {
+      ru: 'TypeScript',
+      ua: 'TypeScript',
+      en: 'TypeScript',
+    },
     image: './assets/images/skills/typescript.png',
-    type: [TechSkillCategory.languages],
+    typeIds: ['languages'],
     knowledgeRating: 5,
     lastUse: 'now',
     experienceInYears: 1,
@@ -16,9 +105,14 @@ export const techSkills: TechSkill[] = [
     },
   },
   {
-    name: 'JavaScript',
+    id: 'JavaScript',
+    title: {
+      ru: 'JavaScript',
+      ua: 'JavaScript',
+      en: 'JavaScript',
+    },
     image: './assets/images/skills/javascript.png',
-    type: [TechSkillCategory.languages],
+    typeIds: ['languages'],
     knowledgeRating: 4,
     lastUse: 'now',
     experienceInYears: 3,
@@ -28,22 +122,27 @@ export const techSkills: TechSkill[] = [
       ua: 'Основна мова програмування',
       en: 'Main programming language',
     },
-    certificates: [
-      {
-        name: {
-          ru: 'Значок оценки навыков JavaScript от LinkedIn',
-          ua: 'Значок оцінки навичок JavaScript від LinkedIn',
-          en: 'LinkedIn JavaScript Skills Badge',
-        },
-        link:
-          'https://www.linkedin.com/in/evgenia-mikhaleva-2a3bb6181/detail/assessments/JavaScript/report/',
-      },
-    ],
+    // certificates: [
+    //   {
+    //     title: {
+    //       ru: 'Значок оценки навыков JavaScript от LinkedIn',
+    //       ua: 'Значок оцінки навичок JavaScript від LinkedIn',
+    //       en: 'LinkedIn JavaScript Skills Badge',
+    //     },
+    //     certificateLink:
+    //       'https://www.linkedin.com/in/evgenia-mikhaleva-2a3bb6181/detail/assessments/JavaScript/report/',
+    //   },
+    // ],
   },
   {
-    name: 'Angular 2+',
+    id: 'Angular 2+',
+    title: {
+      ru: 'Angular 2+',
+      ua: 'Angular 2+',
+      en: 'Angular 2+',
+    },
     image: './assets/images/skills/angular.png',
-    type: [TechSkillCategory.interfaces],
+    typeIds: ['interfaces'],
     knowledgeRating: 5,
     lastUse: 'now',
     experienceInYears: 0.5,
@@ -53,50 +152,70 @@ export const techSkills: TechSkill[] = [
       ua: 'Улюблений фреймворк',
       en: 'Favorite framework',
     },
-    certificates: [
-      {
-        name: {
-          ru: 'Сертификация Angular об окончании курса от Владилена Минина',
-          ua: 'Сертифікація Angular про закінчення курсу від Владилена Мініна',
-          en: 'Angular Certification on Course Completion from Vladilen Minin',
-        },
-        link:
-          'https://www.udemy.com/certificate/UC-07be31b4-bb3c-40e9-a514-42cd92384849/',
-        date: new Date(1600992000000),
-      },
-    ],
+    // certificates: [
+    //   {
+    //     name: {
+    //       ru: 'Сертификация Angular об окончании курса от Владилена Минина',
+    //       ua: 'Сертифікація Angular про закінчення курсу від Владилена Мініна',
+    //       en: 'Angular Certification on Course Completion from Vladilen Minin',
+    //     },
+    //     link:
+    //       'https://www.udemy.com/certificate/UC-07be31b4-bb3c-40e9-a514-42cd92384849/',
+    //     date: new Date(1600992000000),
+    //   },
+    // ],
   },
   {
-    name: 'Angular Material',
+    id: 'Angular Material',
+    title: {
+      ru: 'Angular Material',
+      ua: 'Angular Material',
+      en: 'Angular Material',
+    },
     image: './assets/images/skills/material.png',
-    type: [TechSkillCategory.layout],
+    typeIds: ['layout'],
     knowledgeRating: 5,
     lastUse: 'now',
     experienceInYears: 0.5,
     priority: 1002,
   },
   {
-    name: 'RxJs',
+    id: 'RxJs',
+    title: {
+      ru: 'RxJs',
+      ua: 'RxJs',
+      en: 'RxJs',
+    },
     image: './assets/images/skills/rxjs.svg',
-    type: [TechSkillCategory.interfaces],
+    typeIds: ['interfaces'],
     knowledgeRating: 4,
     lastUse: 'now',
     experienceInYears: 0.5,
     priority: 1999,
   },
   {
-    name: 'NgRx',
+    id: 'NgRx',
+    title: {
+      ru: 'NgRx',
+      ua: 'NgRx',
+      en: 'NgRx',
+    },
     image: './assets/images/skills/ngrx.svg',
-    type: [TechSkillCategory.interfaces],
+    typeIds: ['interfaces'],
     knowledgeRating: 5,
     lastUse: 'now',
     experienceInYears: 0.5,
     priority: 1998,
   },
   {
-    name: 'Redux',
+    id: 'Redux',
+    title: {
+      ru: 'Redux',
+      ua: 'Redux',
+      en: 'Redux',
+    },
     image: './assets/images/skills/redux.svg',
-    type: [TechSkillCategory.interfaces],
+    typeIds: ['interfaces'],
     knowledgeRating: 5,
     lastUse: 'now',
     experienceInYears: 1,
@@ -108,9 +227,14 @@ export const techSkills: TechSkill[] = [
     },
   },
   {
-    name: 'React',
+    id: 'React',
+    title: {
+      ru: 'React',
+      ua: 'React',
+      en: 'React',
+    },
     image: './assets/images/skills/react.svg',
-    type: [TechSkillCategory.interfaces],
+    typeIds: ['interfaces'],
     knowledgeRating: 4,
     lastUse: new Date(1606780800000),
     experienceInYears: 1,
@@ -122,58 +246,78 @@ export const techSkills: TechSkill[] = [
     },
   },
   {
-    name: 'Material-UI (React)',
+    id: 'Material-UI (React)',
+    title: {
+      ru: 'Material-UI (React)',
+      ua: 'Material-UI (React)',
+      en: 'Material-UI (React)',
+    },
     image: './assets/images/skills/material.png',
-    type: [TechSkillCategory.layout],
+    typeIds: ['layout'],
     knowledgeRating: 5,
     lastUse: new Date(1606780800000),
     experienceInYears: 0.5,
     priority: 1002,
   },
   {
-    name: 'HTML5',
+    id: 'HTML5',
+    title: {
+      ru: 'HTML5',
+      ua: 'HTML5',
+      en: 'HTML5',
+    },
     image: './assets/images/skills/html.png',
-    type: [TechSkillCategory.layout],
+    typeIds: ['layout'],
     knowledgeRating: 5,
     lastUse: 'now',
     experienceInYears: 3,
     priority: 1003,
-    certificates: [
-      {
-        name: {
-          ru: 'Значок оценки навыков HTML от LinkedIn',
-          ua: 'Значок оцінки навичок HTML від LinkedIn',
-          en: 'LinkedIn HTML Skills Badge',
-        },
-        link:
-          'https://www.linkedin.com/in/evgenia-mikhaleva-2a3bb6181/detail/assessments/HTML/report/',
-      },
-    ],
+    // certificates: [
+    //   {
+    //     name: {
+    //       ru: 'Значок оценки навыков HTML от LinkedIn',
+    //       ua: 'Значок оцінки навичок HTML від LinkedIn',
+    //       en: 'LinkedIn HTML Skills Badge',
+    //     },
+    //     link:
+    //       'https://www.linkedin.com/in/evgenia-mikhaleva-2a3bb6181/detail/assessments/HTML/report/',
+    //   },
+    // ],
   },
   {
-    name: 'CSS3',
+    id: 'CSS3',
+    title: {
+      ru: 'CSS3',
+      ua: 'CSS3',
+      en: 'CSS3',
+    },
     image: './assets/images/skills/css.svg',
-    type: [TechSkillCategory.layout],
+    typeIds: ['layout'],
     knowledgeRating: 5,
     lastUse: 'now',
     experienceInYears: 3,
     priority: 1003,
-    certificates: [
-      {
-        name: {
-          ru: 'Значок оценки навыков CSS3 от LinkedIn',
-          ua: 'Значок оцінки навичок CSS3 від LinkedIn',
-          en: 'LinkedIn CSS3 Skills Badge',
-        },
-        link:
-          'https://www.linkedin.com/in/evgenia-mikhaleva-2a3bb6181/detail/assessments/CSS3/report/',
-      },
-    ],
+    // certificates: [
+    //   {
+    //     title: {
+    //       ru: 'Значок оценки навыков CSS3 от LinkedIn',
+    //       ua: 'Значок оцінки навичок CSS3 від LinkedIn',
+    //       en: 'LinkedIn CSS3 Skills Badge',
+    //     },
+    //     certificateLink:
+    //       'https://www.linkedin.com/in/evgenia-mikhaleva-2a3bb6181/detail/assessments/CSS3/report/',
+    //   },
+    // ],
   },
   {
-    name: 'Node.js',
+    id: 'Node.js',
+    title: {
+      ru: 'Node.js',
+      ua: 'Node.js',
+      en: 'Node.js',
+    },
     image: './assets/images/skills/nodejs.png',
-    type: [TechSkillCategory.backend, TechSkillCategory.languages],
+    typeIds: ['backend', 'languages'],
     knowledgeRating: 3,
     lastUse: new Date(1598918400000),
     experienceInYears: 0.3,
@@ -185,9 +329,14 @@ export const techSkills: TechSkill[] = [
     },
   },
   {
-    name: 'MongoDB',
+    id: 'MongoDB',
+    title: {
+      ru: 'MongoDB',
+      ua: 'MongoDB',
+      en: 'MongoDB',
+    },
     image: './assets/images/skills/mongodb.png',
-    type: [TechSkillCategory.backend],
+    typeIds: ['backend'],
     knowledgeRating: 3,
     lastUse: new Date(1598918400000),
     experienceInYears: 0.3,
@@ -198,24 +347,14 @@ export const techSkills: TechSkill[] = [
       en: 'Passed the base for understanding the processes',
     },
   },
-  // {
-  //   name: 'MySQL',
-  //   type: [TechSkillCategory.backend],
-  //   image:
-  //     'https://logos-download.com/wp-content/uploads/2016/05/MySQL_logo_logotype.png',
-  //   knowledgeRating: 2,
-  //   lastUse: new Date(1583020800000),
-  //   experienceInYears: 1,
-  //   priority: 998,
-  //   comment: {
-  //     ru: 'Прошла базу для понимания процессов',
-  //     ua: 'Пройшла базу для розуміння процесів',
-  //     en: 'Passed the base for understanding the processes',
-  //   },
-  // },
   {
-    name: 'Git',
-    type: [TechSkillCategory.optimization],
+    id: 'Git',
+    title: {
+      ru: 'Git',
+      ua: 'Git',
+      en: 'Git',
+    },
+    typeIds: ['optimization'],
     image: './assets/images/skills/git.png',
     knowledgeRating: 4,
     lastUse: 'now',
@@ -223,8 +362,13 @@ export const techSkills: TechSkill[] = [
     priority: 1000,
   },
   {
-    name: 'Dart',
-    type: [TechSkillCategory.languages],
+    id: 'Dart',
+    title: {
+      ru: 'Dart',
+      ua: 'Dart',
+      en: 'Dart',
+    },
+    typeIds: ['languages'],
     image: './assets/images/skills/dart.png',
     knowledgeRating: 3,
     lastUse: new Date(1606780800000),
@@ -237,21 +381,31 @@ export const techSkills: TechSkill[] = [
     },
     // certificates: [
     //   {
-    //     name: {
+    //     title: {
     //       ru: 'Сертификация Flutter & Dart об окончании курса от Academind',
     //       ua: 'Сертифікація Flutter & Dart про закінчення курсу від Academind',
     //       en:
     //         'Flutter & Dart Certification on Course Completion from Academind',
     //     },
-    //     link:
+    //     certificateLink:
     //       'https://www.udemy.com/certificate/UC-cfdfee18-d4bb-4445-8cc1-f4f7d62bf7eb/',
-    //     date: new Date(1601769600000),
+    //     dateTo: new Date(1601769600000),
+    //     place: {
+    //       ru: 'Udemy',
+    //       ua: 'Udemy',
+    //       en: 'Udemy',
+    //     },
     //   },
     // ],
   },
   {
-    name: 'Flutter',
-    type: [TechSkillCategory.interfaces],
+    id: 'Flutter',
+    title: {
+      ru: 'Flutter',
+      ua: 'Flutter',
+      en: 'Flutter',
+    },
+    typeIds: ['interfaces'],
     image: './assets/images/skills/flutter.png',
     knowledgeRating: 3,
     lastUse: new Date(1606780800000),
@@ -277,8 +431,13 @@ export const techSkills: TechSkill[] = [
     // ],
   },
   {
-    name: 'GSAP',
-    type: [TechSkillCategory.layout],
+    id: 'GSAP',
+    title: {
+      ru: 'GSAP',
+      ua: 'GSAP',
+      en: 'GSAP',
+    },
+    typeIds: ['layout'],
     image: './assets/images/skills/gsap.png',
     knowledgeRating: 4,
     lastUse: 'now',
@@ -286,8 +445,13 @@ export const techSkills: TechSkill[] = [
     priority: 1000,
   },
   {
-    name: 'Bootstrap',
-    type: [TechSkillCategory.layout],
+    id: 'Bootstrap',
+    title: {
+      ru: 'Bootstrap',
+      ua: 'Bootstrap',
+      en: 'Bootstrap',
+    },
+    typeIds: ['layout'],
     image: './assets/images/skills/bootstrap.png',
     knowledgeRating: 4,
     lastUse: new Date(1575158400000),
@@ -295,8 +459,13 @@ export const techSkills: TechSkill[] = [
     priority: 900,
   },
   {
-    name: 'Karma + Jasmine',
-    type: [TechSkillCategory.testing],
+    id: 'Karma + Jasmine',
+    title: {
+      ru: 'Karma + Jasmine',
+      ua: 'Karma + Jasmine',
+      en: 'Karma + Jasmine',
+    },
+    typeIds: ['testing'],
     image: './assets/images/skills/karma.png',
     knowledgeRating: 4,
     lastUse: 'now',
@@ -304,8 +473,13 @@ export const techSkills: TechSkill[] = [
     priority: 1000,
   },
   {
-    name: 'Protractor',
-    type: [TechSkillCategory.testing],
+    id: 'Protractor',
+    title: {
+      ru: 'Protractor',
+      ua: 'Protractor',
+      en: 'Protractor',
+    },
+    typeIds: ['testing'],
     image: './assets/images/skills/protractor.png',
     knowledgeRating: 4,
     lastUse: 'now',
@@ -313,8 +487,13 @@ export const techSkills: TechSkill[] = [
     priority: 1000,
   },
   {
-    name: 'Firebase',
-    type: [TechSkillCategory.backend],
+    id: 'Firebase',
+    title: {
+      ru: 'Firebase',
+      ua: 'Firebase',
+      en: 'Firebase',
+    },
+    typeIds: ['backend'],
     image: './assets/images/skills/firebase.png',
     knowledgeRating: 4,
     lastUse: 'now',
@@ -322,8 +501,13 @@ export const techSkills: TechSkill[] = [
     priority: 1005,
   },
   {
-    name: 'Pug',
-    type: [TechSkillCategory.layout],
+    id: 'Pug',
+    title: {
+      ru: 'Pug',
+      ua: 'Pug',
+      en: 'Pug',
+    },
+    typeIds: ['layout'],
     image: './assets/images/skills/pug.svg',
     knowledgeRating: 5,
     lastUse: 'now',
@@ -331,8 +515,13 @@ export const techSkills: TechSkill[] = [
     priority: 1000,
   },
   {
-    name: 'Handlebars',
-    type: [TechSkillCategory.layout],
+    id: 'Handlebars',
+    title: {
+      ru: 'Handlebars',
+      ua: 'Handlebars',
+      en: 'Handlebars',
+    },
+    typeIds: ['layout'],
     image: './assets/images/skills/handlebars.png',
     knowledgeRating: 5,
     lastUse: 'now',
@@ -340,8 +529,13 @@ export const techSkills: TechSkill[] = [
     priority: 1000,
   },
   {
-    name: 'SCSS/SASS',
-    type: [TechSkillCategory.layout],
+    id: 'SCSS/SASS',
+    title: {
+      ru: 'SCSS/SASS',
+      ua: 'SCSS/SASS',
+      en: 'SCSS/SASS',
+    },
+    typeIds: ['layout'],
     image: './assets/images/skills/sass.png',
     knowledgeRating: 5,
     lastUse: 'now',
@@ -349,8 +543,13 @@ export const techSkills: TechSkill[] = [
     priority: 1000,
   },
   {
-    name: 'Webpack',
-    type: [TechSkillCategory.optimization, TechSkillCategory.layout],
+    id: 'Webpack',
+    title: {
+      ru: 'Webpack',
+      ua: 'Webpack',
+      en: 'Webpack',
+    },
+    typeIds: ['optimization', 'layout'],
     image: './assets/images/skills/webpack.png',
     knowledgeRating: 3,
     lastUse: 'now',
@@ -366,8 +565,13 @@ export const techSkills: TechSkill[] = [
     },
   },
   {
-    name: 'Gulp',
-    type: [TechSkillCategory.optimization, TechSkillCategory.layout],
+    id: 'Gulp',
+    title: {
+      ru: 'Gulp',
+      ua: 'Gulp',
+      en: 'Gulp',
+    },
+    typeIds: ['optimization', 'layout'],
     image: './assets/images/skills/gulp.png',
     knowledgeRating: 4,
     lastUse: new Date(1583020800000),
@@ -375,8 +579,13 @@ export const techSkills: TechSkill[] = [
     priority: 1000,
   },
   {
-    name: 'ESlint',
-    type: [TechSkillCategory.optimization],
+    id: 'ESlint',
+    title: {
+      ru: 'ESlint',
+      ua: 'ESlint',
+      en: 'ESlint',
+    },
+    typeIds: ['optimization'],
     image: './assets/images/skills/eslint.png',
     knowledgeRating: 4,
     lastUse: 'now',
@@ -384,8 +593,13 @@ export const techSkills: TechSkill[] = [
     priority: 1000,
   },
   {
-    name: 'Prettier',
-    type: [TechSkillCategory.optimization],
+    id: 'Prettier',
+    title: {
+      ru: 'Prettier',
+      ua: 'Prettier',
+      en: 'Prettier',
+    },
+    typeIds: ['optimization'],
     image: './assets/images/skills/prettier.png',
     knowledgeRating: 4,
     lastUse: 'now',
@@ -393,45 +607,27 @@ export const techSkills: TechSkill[] = [
     priority: 1000,
   },
   {
-    name: 'Husky',
-    type: [TechSkillCategory.optimization],
+    id: 'Husky',
+    title: {
+      ru: 'Husky',
+      ua: 'Husky',
+      en: 'Husky',
+    },
+    typeIds: ['optimization'],
     image: './assets/images/skills/husky.jpg',
     knowledgeRating: 4,
     lastUse: 'now',
     experienceInYears: 1,
     priority: 1000,
   },
-  // {
-  //   name: 'Laravel',
-  //   type: [TechSkillCategory.backend],
-  //   image: 'https://cdn.iconscout.com/icon/free/png-256/laravel-226015.png',
-  //   knowledgeRating: 4,
-  //   lastUse: new Date(1583020800000),
-  //   experienceInYears: 0.3,
-  //   priority: 998,
-  //   comment: {
-  //     ru: 'Прошла базу для понимания процессов',
-  //     ua: 'Пройшла базу для розуміння процесів',
-  //     en: 'Passed the base for understanding the processes',
-  //   },
-  // },
-  // {
-  //   name: 'PHP',
-  //   type: [TechSkillCategory.languages, TechSkillCategory.backend],
-  //   image: 'https://pngimg.com/uploads/php/php_PNG43.png',
-  //   knowledgeRating: 4,
-  //   lastUse: new Date(1583020800000),
-  //   experienceInYears: 0.7,
-  //   priority: 998,
-  //   comment: {
-  //     ru: 'Прошла базу для понимания процессов',
-  //     ua: 'Пройшла базу для розуміння процесів',
-  //     en: 'Passed the base for understanding the processes',
-  //   },
-  // },
   {
-    name: 'Webstorm',
-    type: [TechSkillCategory.editors],
+    id: 'Webstorm',
+    title: {
+      ru: 'Webstorm',
+      ua: 'Webstorm',
+      en: 'Webstorm',
+    },
+    typeIds: ['editors'],
     image: './assets/images/skills/webstorm.png',
     knowledgeRating: 4,
     lastUse: 'now',
@@ -439,8 +635,13 @@ export const techSkills: TechSkill[] = [
     priority: 1000,
   },
   {
-    name: 'Android Studio',
-    type: [TechSkillCategory.editors],
+    id: 'Android Studio',
+    title: {
+      ru: 'Android Studio',
+      ua: 'Android Studio',
+      en: 'Android Studio',
+    },
+    typeIds: ['editors'],
     image: './assets/images/skills/android-studio.png',
     knowledgeRating: 4,
     lastUse: new Date(1606780800000),
@@ -448,8 +649,13 @@ export const techSkills: TechSkill[] = [
     priority: 950,
   },
   {
-    name: 'VS Code',
-    type: [TechSkillCategory.editors],
+    id: 'VS Code',
+    title: {
+      ru: 'VS Code',
+      ua: 'VS Code',
+      en: 'VS Code',
+    },
+    typeIds: ['editors'],
     image: './assets/images/skills/vscode.png',
     knowledgeRating: 4,
     lastUse: new Date(1601589596000),
@@ -457,8 +663,13 @@ export const techSkills: TechSkill[] = [
     priority: 1000,
   },
   {
-    name: 'Figma',
-    type: [TechSkillCategory.design, TechSkillCategory.layout],
+    id: 'Figma',
+    title: {
+      ru: 'Figma',
+      ua: 'Figma',
+      en: 'Figma',
+    },
+    typeIds: ['design', 'layout'],
     image: './assets/images/skills/figma.png',
     knowledgeRating: 4,
     lastUse: 'now',
@@ -466,8 +677,13 @@ export const techSkills: TechSkill[] = [
     priority: 1000,
   },
   {
-    name: 'Photoshop',
-    type: [TechSkillCategory.design],
+    id: 'Photoshop',
+    title: {
+      ru: 'Photoshop',
+      ua: 'Photoshop',
+      en: 'Photoshop',
+    },
+    typeIds: ['design'],
     image: './assets/images/skills/photoshop.png',
     knowledgeRating: 4,
     lastUse: 'now',
@@ -480,8 +696,13 @@ export const techSkills: TechSkill[] = [
     },
   },
   {
-    name: 'Illustrator',
-    type: [TechSkillCategory.design],
+    id: 'Illustrator',
+    title: {
+      ru: 'Illustrator',
+      ua: 'Illustrator',
+      en: 'Illustrator',
+    },
+    typeIds: ['design'],
     image: './assets/images/skills/illustrator.png',
     knowledgeRating: 4,
     lastUse: 'now',
@@ -494,8 +715,13 @@ export const techSkills: TechSkill[] = [
     },
   },
   {
-    name: 'Animate',
-    type: [TechSkillCategory.design],
+    id: 'Animate',
+    title: {
+      ru: 'Animate',
+      ua: 'Animate',
+      en: 'Animate',
+    },
+    typeIds: ['design'],
     image: './assets/images/skills/animate.png',
     knowledgeRating: 4,
     lastUse: new Date(1585778396000),
@@ -508,8 +734,13 @@ export const techSkills: TechSkill[] = [
     },
   },
   {
-    name: 'Google Web Designer',
-    type: [TechSkillCategory.design],
+    id: 'Google Web Designer',
+    title: {
+      ru: 'Google Web Designer',
+      ua: 'Google Web Designer',
+      en: 'Google Web Designer',
+    },
+    typeIds: ['design'],
     image: './assets/images/skills/google-web-designer.png',
     knowledgeRating: 4,
     lastUse: new Date(1585778396000),
@@ -521,136 +752,14 @@ export const techSkills: TechSkill[] = [
       en: 'I am able to make animation (including SVG), thanks to education',
     },
   },
-  // {
-  //   name: 'Google Analytics',
-  //   type: [TechSkillCategory.promotion],
-  //   image: './assets/images/skills/google-analytics.png',
-  //   knowledgeRating: 5,
-  //   lastUse: new Date(1585778396000),
-  //   experienceInYears: 3,
-  //   priority: 1000,
-  //   comment: {
-  //     ru:
-  //       'Работала маркетологом и могу не только подключать, но и использовать',
-  //     ua:
-  //       'Працювала маркетологом і можу не тільки підключати, але і використовувати',
-  //     en: 'I worked as a marketer and can not only connect, but also use',
-  //   },
-  //   // certificates: [
-  //   //   {
-  //   //     name: {
-  //   //       ru: 'Google Analytics Individual Qualification',
-  //   //       ua: 'Google Analytics Individual Qualification',
-  //   //       en: 'Google Analytics Individual Qualification',
-  //   //     },
-  //   //     link: 'https://skillshop.exceedlms.com/student/award/38333364',
-  //   //     date: new Date(1570838400000),
-  //   //   },
-  //   //   {
-  //   //     name: {
-  //   //       ru: 'Google Analytics для начинающих',
-  //   //       ua: 'Google Analytics для початківців',
-  //   //       en: 'Google Analytics for Beginners',
-  //   //     },
-  //   //     link:
-  //   //       'https://analytics.google.com/analytics/academy/certificate/eNaK9h8aQ4maqP6FfMyTWg',
-  //   //     date: new Date(1569628800000),
-  //   //   },
-  //   //   {
-  //   //     name: {
-  //   //       ru: 'Расширенный курс по Google Аналитике',
-  //   //       ua: 'Розширений курс по Google Аналітиці',
-  //   //       en: 'Advanced Google Analytics Course',
-  //   //     },
-  //   //     link:
-  //   //       'https://analytics.google.com/analytics/academy/certificate/S-id5GHvSAGuWEG7X5H21A',
-  //   //     date: new Date(1570924800000),
-  //   //   },
-  //   // ],
-  // },
-  // {
-  //   name: 'Google Tag Manager',
-  //   type: [TechSkillCategory.promotion],
-  //   image: './assets/images/skills/g-tm.png',
-  //   knowledgeRating: 5,
-  //   lastUse: new Date(1585778396000),
-  //   experienceInYears: 1,
-  //   priority: 1000,
-  //   comment: {
-  //     ru:
-  //       'Работала маркетологом и могу не только подключать, но и использовать',
-  //     ua:
-  //       'Працювала маркетологом і можу не тільки підключати, але і використовувати',
-  //     en: 'I worked as a marketer and can not only connect, but also use',
-  //   },
-  // },
-  // {
-  //   name: 'Google Search Console',
-  //   type: [TechSkillCategory.promotion],
-  //   image: './assets/images/skills/google-search-console.svg',
-  //   knowledgeRating: 4,
-  //   lastUse: new Date(1585778396000),
-  //   experienceInYears: 1,
-  //   priority: 1000,
-  //   comment: {
-  //     ru:
-  //       'Работала маркетологом и могу не только подключать, но и использовать',
-  //     ua:
-  //       'Працювала маркетологом і можу не тільки підключати, але і використовувати',
-  //     en: 'I worked as a marketer and can not only connect, but also use',
-  //   },
-  // },
-  // {
-  //   name: 'Yandex Metrika',
-  //   type: [TechSkillCategory.promotion],
-  //   image: './assets/images/skills/yandex-metrika.png',
-  //   knowledgeRating: 4,
-  //   lastUse: new Date(1585778396000),
-  //   experienceInYears: 1,
-  //   priority: 1000,
-  //   comment: {
-  //     ru:
-  //       'Работала маркетологом и могу не только подключать, но и использовать',
-  //     ua:
-  //       'Працювала маркетологом і можу не тільки підключати, але і використовувати',
-  //     en: 'I worked as a marketer and can not only connect, but also use',
-  //   },
-  // },
-  // {
-  //   name: 'Yandex Webmaster',
-  //   type: [TechSkillCategory.promotion],
-  //   image: './assets/images/skills/yandex.svg',
-  //   knowledgeRating: 4,
-  //   lastUse: new Date(1585778396000),
-  //   experienceInYears: 1,
-  //   priority: 1000,
-  //   comment: {
-  //     ru:
-  //       'Работала маркетологом и могу не только подключать, но и использовать',
-  //     ua:
-  //       'Працювала маркетологом і можу не тільки підключати, але і використовувати',
-  //     en: 'I worked as a marketer and can not only connect, but also use',
-  //   },
-  // },
-  // {
-  //   name: 'Facebook Analytics',
-  //   type: [TechSkillCategory.promotion],
-  //   image: './assets/images/skills/facebook-analytics.png',
-  //   knowledgeRating: 4,
-  //   lastUse: new Date(1585778396000),
-  //   experienceInYears: 1,
-  //   priority: 1000,
-  //   comment: {
-  //     ru:
-  //       'Работала маркетологом и могу не только подключать, но и использовать',
-  //     ua:
-  //       'Працювала маркетологом і можу не тільки підключати, але і використовувати',
-  //     en: 'I worked as a marketer and can not only connect, but also use',
-  //   },
-  // },
   {
-    name: 'jQuery',
-    type: [TechSkillCategory.layout],
+    id: 'jQuery',
+    title: {
+      ru: 'jQuery',
+      ua: 'jQuery',
+      en: 'jQuery',
+    },
+    typeIds: ['layout'],
     image: './assets/images/skills/jquery.png',
     knowledgeRating: 5,
     lastUse: new Date(1585778396000),
@@ -658,88 +767,17 @@ export const techSkills: TechSkill[] = [
     priority: 900,
   },
   {
-    name: 'Vue',
-    type: [TechSkillCategory.interfaces],
+    id: 'Vue',
+    title: {
+      ru: 'Vue',
+      ua: 'Vue',
+      en: 'Vue',
+    },
+    typeIds: ['interfaces'],
     image: './assets/images/skills/vue.png',
     knowledgeRating: 3,
     lastUse: new Date(1593561600000),
     experienceInYears: 0.2,
     priority: 1000,
-  },
-];
-
-export const softSkills: SoftSkill[] = [
-  {
-    name: {
-      ru: 'Английский язык',
-      ua: 'Англійська мова',
-      en: 'English',
-    },
-    icon: './assets/images/skills/translation.svg',
-    priority: 1000,
-    comment: {
-      ru: 'Intermediate',
-      ua: 'Intermediate',
-      en: 'Intermediate',
-    },
-  },
-  {
-    name: {
-      ru: 'Русский язык',
-      ua: 'Російська мова',
-      en: 'Russian language',
-    },
-    icon: './assets/images/skills/translation.svg',
-    priority: 999,
-    comment: {
-      ru: 'Нативный',
-      ua: 'Нативна',
-      en: 'Native',
-    },
-  },
-  {
-    name: {
-      ru: 'Позитивность',
-      ua: 'Позитивність',
-      en: 'Positivity',
-    },
-    icon: './assets/images/skills/smile.svg',
-    priority: 997,
-    comment: {
-      ru:
-        'Уважительно отношусь у другим людям, не создаю конфиктов и стараюсь поднять настроение человека при разговоре',
-      ua:
-        'Поважаю інші, не створюю конфліктів і намагаюся підняти настрій співрозмовника при розмові',
-      en:
-        'I respect others, do not create conflicts and try to cheer up the interlocutor in conversation',
-    },
-  },
-  {
-    name: {
-      ru: 'Пунктуальность',
-      ua: 'Пунктуальність',
-      en: 'Punctuality',
-    },
-    icon: './assets/images/skills/clock.jpg',
-    priority: 998,
-    comment: {
-      ru: 'Не опаздываю и делаю работу в сроки',
-      ua: 'Не спізнююся і роблю роботу в терміни',
-      en: 'I am not late and do the work on time',
-    },
-  },
-  {
-    name: {
-      ru: 'Аккуратность',
-      ua: 'Акуратність',
-      en: 'Tidiness',
-    },
-    icon: './assets/images/skills/clean.svg',
-    priority: 998,
-    comment: {
-      ru: 'Пишу чистый и аккуратный код, всегда стараясь его улучшить',
-      ua: 'Пишу чистий і акуратний код, завжди намагаючись його покращити',
-      en: 'I write clean and tidy code, always trying to improve it',
-    },
   },
 ];

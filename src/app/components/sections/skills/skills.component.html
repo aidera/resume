@@ -1,28 +1,18 @@
 <section>
   <h2>Навыки</h2>
 
-  <div class="skills-group" *ngFor="let category of techSkillCategories">
-    <ng-container [ngSwitch]="category">
-      <h3 *ngSwitchCase="0">Языки программирования</h3>
-      <h3 *ngSwitchCase="1">Создание интерфейсов</h3>
-      <h3 *ngSwitchCase="2">Вёрстка</h3>
-      <h3 *ngSwitchCase="3">Тестирование</h3>
-      <h3 *ngSwitchCase="4">Оптимизация</h3>
-      <h3 *ngSwitchCase="5">Серверная часть</h3>
-      <h3 *ngSwitchCase="6">Редакторы</h3>
-      <h3 *ngSwitchCase="7">Дизайн</h3>
-      <h3 *ngSwitchCase="8">Другие</h3>
-    </ng-container>
+  <div class="skills-group" *ngFor="let type of skillTypes">
+    <h3>{{ type.title.ru }}</h3>
 
     <div class="skills-list">
       <ng-container *ngFor="let skill of skills; let i = index">
-        <div class="skill" *ngIf="skill.type.includes(+category)">
+        <div class="skill" *ngIf="skill.typeIds.includes(type.id)">
           <div class="image">
-            <img [src]="skill.image" [alt]="skill.name" />
+            <img [src]="skill.image" [alt]="skill.title.ru" />
           </div>
 
           <div class="content">
-            <h4>{{ skill.name }}</h4>
+            <h4>{{ skill.title.ru }}</h4>
 
             <div class="rate" *ngIf="skill.knowledgeRating !== null">
               <span
@@ -56,7 +46,7 @@
             <div class="certificates" *ngIf="skill.certificates">
               <ng-container *ngFor="let certificate of skill.certificates">
                 <a [href]="certificate.link" target="_blank">{{
-                  certificate.name.ru
+                  certificate.title.ru
                 }}</a>
               </ng-container>
             </div>
